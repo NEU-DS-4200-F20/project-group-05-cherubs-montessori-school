@@ -2,7 +2,7 @@
 // variables and prevent 
 ((() => {
 
-  d3.csv("data/Revised Student Data/Student Data Cleaned Combined - env_list_combined.csv").then(createCharts);
+  d3.csv("data/Revised Student Data/Student Data Cleaned Combined - env_list_combined (1).csv").then(createCharts);
 
   function createCharts(data) {
 

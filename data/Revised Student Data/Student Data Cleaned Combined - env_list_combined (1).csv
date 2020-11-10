@@ -1,0 +1,859 @@
+Grade,Location,Classroom,Starting_Year,Si No
+M0,HSR Layout,1,2015,1
+M1,HSR Layout,1,2015,2
+M1,HSR Layout,1,2015,3
+M1,Kudlu Gate,1,2015,4
+M1,Kaikondrahalli,1,2015,5
+M1,Bommanahalli,1,2015,6
+M1,HSR Layout,1,2015,7
+M1,Sarjapur Road,1,2015,8
+M1,Begur,1,2015,9
+M1,Begur,1,2015,10
+M1,HSR Layout,1,2015,11
+M1,HSR Layout,1,2015,12
+M2,BTM 1st Stage,1,2015,13
+M2,HSR Layout,1,2015,14
+M2,HSR Layout,1,2015,15
+M2,HSR Layout,1,2015,16
+M2,HSR Layout,1,2015,17
+M2,Bommanahalli,1,2015,18
+M2,HSR Layout,1,2015,19
+M2,HSR Layout,1,2015,20
+M2,HSR Layout,1,2015,21
+M2,Devarabisanahalli,1,2015,22
+M2,HSR Layout,1,2015,23
+M2,HSR Layout,1,2015,24
+M2,HSR Layout,1,2015,25
+M3,Bommanahalli,1,2015,26
+M3,HSR Layout,1,2015,27
+M3,Kodichikkanahalli,1,2015,28
+M3,Sarjapur Road,1,2015,29
+M3,HSR Layout,1,2015,30
+M3,Hosa Road,1,2015,31
+M1,Bommanahalli,1,2015,32
+M1,ITI Layout,2,2015,33
+M1,Electronic City,2,2015,34
+M1,Koramangala,2,2015,35
+M1,HSR Layout,2,2015,36
+M1,Somasandra Palya,2,2015,37
+M1,Bommanahalli,2,2015,38
+M1,Bommanahalli,2,2015,39
+M1,Sarjapur,2,2015,40
+M2,Bellandur,2,2015,41
+M2,Kaikondrahalli,2,2015,42
+M2,Roopena Agrahara,2,2015,43
+M2,Devarabisanahalli,2,2015,44
+M2,Bellandur,2,2015,45
+M2,HSR Layout,2,2015,46
+M2,HSR Layout,2,2015,47
+M2,HSR Layout,2,2015,48
+M2,HSR Layout,2,2015,49
+M2,HSR Layout,2,2015,50
+M2,HSR Layout,2,2015,51
+M2,Hosapalya,2,2015,52
+M3,HSR Layout,2,2015,53
+M3,Sarjapur Road,2,2015,54
+M3,Mangamana Palya,2,2015,55
+M3,HSR Layout,2,2015,56
+M3,HSR Layout,2,2015,57
+M3,HSR Layout,2,2015,58
+M3,Harlur,2,2015,59
+M3,Sarjapur,2,2015,60
+M0,Garve Bhavi Palya,3,2015,61
+M0,Jakkasandra,3,2015,62
+M1,HSR Layout,3,2015,63
+M1,Kudlu Gate,3,2015,64
+M1,HSR Layout,3,2015,65
+M1,Mangamana Palya,3,2015,66
+M1,BTM 2nd stage,3,2015,67
+M1,HSR Layout,3,2015,68
+M1,Kaikondrahalli,3,2015,69
+M1,Roopena Agrahara,3,2015,70
+M2,Hosapalya,3,2015,71
+M2,Rayasandra,3,2015,72
+M2,Bellandur,3,2015,73
+M2,HsR Layout,3,2015,74
+M2,HSR Layout,3,2015,75
+M2,Bellandur,3,2015,76
+M2,Somasandra Palya,3,2015,77
+M2,Electronic City,3,2015,78
+M2,HSR Layout,3,2015,79
+M2,MAngamana Palya,3,2015,80
+M2,HSR Layout,3,2015,81
+M2,HSR Layout,3,2015,82
+M3,Harlur,3,2015,83
+M3,HSR Layout,3,2015,84
+M3,Kudlu Gate,3,2015,85
+M3,HSR Layout,3,2015,86
+M3,HSR Layout,3,2015,87
+M3,HSR Layout,3,2015,88
+M3,Hongasandra,3,2015,89
+M0,HSR Layout,4,2015,90
+M0,HSR Layout,4,2015,91
+M1,HSR Layout,4,2015,92
+M1,Hosapalya,4,2015,93
+M1,Bommanahalli,4,2015,94
+M1,Garve Bhavi Palya,4,2015,95
+M1,Bellandur,4,2015,96
+M1,Garve Bhavi Palya,4,2015,97
+M1,Hosapalya,4,2015,98
+M2,ITI Layout,4,2015,99
+M2,Hosa Road,4,2015,100
+M2,Hongasandra,4,2015,101
+M2,Devarabisanahalli,4,2015,102
+M2,Bellandur,4,2015,103
+M2,HSR Layout,4,2015,104
+M2,Hosur Road,4,2015,105
+M2,Bellandur,4,2015,106
+M2,HSR Layout,4,2015,107
+M2,HSR Layout,4,2015,108
+M2,Kudlu Gate,4,2015,109
+M2,HsR Layout,4,2015,110
+M2,Mangamana Palya,4,2015,111
+M2,HSR Layout,4,2015,112
+M2,Bellandur,4,2015,113
+M3,Electronic City,4,2015,114
+M3,HSR Layout,4,2015,115
+M3,HSR Layout,4,2015,116
+M3,HSR Layout,4,2015,117
+M3,HSR Layout,4,2015,118
+M3,Kudlu Gate,4,2015,119
+M3,HSR Layout,4,2015,120
+M3,HSR Layout,4,2015,121
+M1,Roopena Agrahara,5,2015,122
+M1,Bommanahalli,5,2015,123
+M1,HSR Layout,5,2015,124
+M1,Kudlu Gate,5,2015,125
+M1,HSR Layout,5,2015,126
+M1,HSR Layout,5,2015,127
+M1,Teachers Colony,5,2015,128
+M1,ITI Layout,5,2015,129
+M1,Roopena Agrahara,5,2015,130
+M1,Hosa Road,5,2015,131
+M1,Bellandur,5,2015,132
+M2,Bellandur,5,2015,133
+M2,Virat Nagar,5,2015,134
+M2,HSR Layout,5,2015,135
+M2,HSR Layout,5,2015,136
+M2,HSR Layout,5,2015,137
+M2,ITI Layout,5,2015,138
+M2,Sarjapur Road,5,2015,139
+M2,Garve Bhavi Palya,5,2015,140
+M2,Bommanahalli,5,2015,141
+M2,HSR Layout,5,2015,142
+M2,Hosur Road,5,2015,143
+M3,Sarjapur road,5,2015,144
+M3,Bellandur,5,2015,145
+M3,Bommanahalli,5,2015,146
+M3,Jakkasandra,5,2015,147
+M3,Iblur Junction,5,2015,148
+M3,HSR Layout,5,2015,149
+M3,Singasandra,5,2015,150
+M3,singasandra,5,2015,151
+M3,HSR Layout,5,2015,152
+M3,HSR Layout,5,2015,153
+M0,HSR Layout,6,2015,154
+M0,Bommanahalli,6,2015,155
+M0,Kudlu Gate,6,2015,156
+M1,Devarabisanahalli,6,2015,157
+M1,HSR Layout,6,2015,158
+M1,Harlur,6,2015,159
+M1,Harlur,6,2015,160
+M1,Mangamana Palya,6,2015,161
+M1,HSR Layout,6,2015,162
+M1,HSR Layout,6,2015,163
+M2,Harlur,6,2015,164
+M2,Devarabisanahalli,6,2015,165
+M2,Kadubisanahalli,6,2015,166
+M2,Kodichikkanahalli,6,2015,167
+M2,HSR Layout,6,2015,168
+M2,Harlur,6,2015,169
+M2,Roopena Agrahara,6,2015,170
+M2,Bellandur,6,2015,171
+M2,Bommanahalli,6,2015,172
+M2,Kudlu Gate,6,2015,173
+M2,HSR Layout,6,2015,174
+M3,Bellandur,6,2015,175
+M3,HSR Layout,6,2015,176
+M3,HSR Layout,6,2015,177
+M3,Kasavanahalli,6,2015,178
+M3,HSR Layout,6,2015,179
+M3,Bommanahalli,6,2015,180
+M3,Sarjapur Road,6,2015,181
+M3,Bellandur,6,2015,182
+M3,Bommanahalli,6,2015,183
+M3,HSR Layout,6,2015,184
+M3,Singasandra,6,2015,185
+M0,Bommanahalli,1,2016,186
+M0,HSR Layout,1,2016,187
+M1,Somasandra Palya,1,2016,188
+M1,Sarjapurroad,1,2016,189
+M1,BTM Layout,1,2016,190
+M1,HSR Layout,1,2016,191
+M1,Bommanahalli,1,2016,192
+M1,HSR Layout,1,2016,193
+M1,HSR Layout,1,2016,194
+M1,Sarjapurroad,1,2016,195
+M1,Bellandur,1,2016,196
+M2,HSR Layout,1,2016,197
+M2,Koramangala,1,2016,198
+M2,Bommanahalli,1,2016,32
+M2,Sarjapurroad,1,2016,199
+M2,HSR Layout,1,2016,2
+M2,HSR Layout,1,2016,3
+M2,Kudlugate,1,2016,4
+M2,Bommanahalli,1,2016,6
+M2,Sarjapurroad,1,2016,8
+M2,HSR Layout,1,2016,11
+M2,HSR Layout,1,2016,21
+M3,BTM 1st Stage,1,2016,13
+M3,HSR Layout,1,2016,15
+M3,HSR Layout,1,2016,16
+M3,HSR Layout,1,2016,17
+M3,Bommanahalli,1,2016,18
+M3,HSR Layout,1,2016,19
+M2,HSR Layout,1,2016,23
+M3,HSR Layout,1,2016,24
+M3,Sarjapurroad,1,2016,25
+M3,Harlur,1,2016,201
+M1,Harlur,2,2016,202
+M1,HSR Layout,2,2016,203
+M1,HSR Layout,2,2016,204
+M1,Electronic City,2,2016,205
+M1,HSR Layout,2,2016,206
+M1,HSR Layout,2,2016,207
+M2,Sarjapurroad,2,2016,208
+M2,HSR Layout,2,2016,209
+M2,Sarjapurroad,2,2016,210
+M2,Doddakannahalli,2,2016,211
+M2,Singasandra,2,2016,212
+M2,Devarabisanahalli,2,2016,213
+M2,HSR Layout,2,2016,214
+M2,Sarjapurroad,2,2016,215
+M2,Koramangala,2,2016,35
+M2,HSR Layout,2,2016,37
+M2,Bommanahalli,2,2016,38
+M2,HSR Layout,2,2016,40
+M2,HSR Layout,2,2016,50
+M3,Bellandur,2,2016,41
+M3,Kaikondrahalli,2,2016,42
+M3,Roopena Agrahara,2,2016,43
+M3,Devarabisanahalli,2,2016,44
+M3,Bellandur,2,2016,45
+M3,HSR Layout,2,2016,47
+M3,HSR Layout,2,2016,48
+M3,HSR Layout,2,2016,49
+M3,HSR Layout,2,2016,51
+M3,Hosapalya,2,2016,52
+M1,Garve Bhavi Palya,3,2016,61
+M1,HSR Layout,3,2016,216
+M1,Sarjapurroad,3,2016,217
+M1,sarjapurroad,3,2016,218
+M1,Kaikondrahalli,3,2016,219
+M1,HSR Layout,3,2016,220
+M2,HSR Layout,3,2016,221
+M2,Sarjapurroad,3,2016,222
+M2,Kudlugate,3,2016,223
+M2,Electronic City,3,2016,224
+M2,HSR Layout,3,2016,225
+M2,Koramangala,3,2016,226
+M2,HSR Layout,3,2016,227
+M2,Bommanahalli,3,2016,228
+M2,HSR Layout,3,2016,65
+M2,Managamana Palya,3,2016,66
+M2,BTM 2nd Stage,3,2016,67
+M2,HSR Layout,3,2016,68
+M2,Kaikondrahalli,3,2016,69
+M3,Rayasandra,3,2016,72
+M3,HSR Layout,3,2016,74
+M3,HSR Layout,3,2016,75
+M3,Bellandur,3,2016,76
+M3,Somasandra Palya,3,2016,77
+M3,Electronic City,3,2016,78
+M3,Managamana Palya,3,2016,80
+M3,HSR Layout,3,2016,82
+M3,HSR Layout,3,2016,229
+M3,Bellandur,3,2016,230
+M1,HsR Layout,4,2016,231
+M1,Ibkur Junction,4,2016,232
+M1,Bellandur,4,2016,233
+M1,HSR Layout,4,2016,234
+M1,HSR Layout,4,2016,235
+M1,HSR Layout,4,2016,236
+M1,HSR Layout,4,2016,237
+M1,Bellandur,4,2016,238
+M2,Sarjapurroad,4,2016,239
+M2,Bellandur,4,2016,240
+M2,Bellandur,4,2016,241
+M2,Kasavanahalli,4,2016,242
+M2,Koramangala,4,2016,123
+M2,HSR Layout,4,2016,92
+M2,Bommanahalli,4,2016,94
+M2,Garve Bhavi Palya,4,2016,95
+M2,garve Bhavi Palya,4,2016,97
+M2,Hosapalya,4,2016,98
+M3,ITI Laouy,4,2016,99
+M3,Hosapalya,4,2016,100
+M3,Hongasandra,4,2016,101
+M3,Devarabisanahalli,4,2016,243
+M3,Bellandur,4,2016,103
+M3,HSR Layout,4,2016,104
+M3,Bellandur,4,2016,106
+M3,HSR Layout,4,2016,107
+M2,HSR Layout,4,2016,110
+M3,Bellandur,4,2016,244
+M3,HSR Layout,4,2016,245
+M0,HSR Layout,5,2016,124
+M1,Sarjapurroad,5,2016,246
+M1,Bommanahalli,5,2016,247
+M1,HSR Layout,5,2016,248
+M1,HSR Layout,5,2016,249
+M1,HSR Layout,5,2016,250
+M1,Bommanahalli,5,2016,251
+M2,Harlur,5,2016,252
+M2,HSR Layout,5,2016,253
+M2,Bommanahalli,5,2016,123
+M2,Roopena Agrahara,5,2016,122
+M2,HSR Layout,5,2016,124
+M2,Kudlugate,5,2016,125
+M2,HSR Layout,5,2016,126
+M2,HSR Layout,5,2016,127
+M2,ITI Layout,5,2016,129
+M2,Roopena Agrahara,5,2016,130
+M2,Hosa Road,5,2016,131
+M2,Hosa Road,5,2016,132
+M2,Bommanahalli,5,2016,141
+M3,Bellandur,5,2016,133
+M3,Virat Nagar,5,2016,134
+M3,HSR Layout,5,2016,135
+M3,HSR Layout,5,2016,137
+M3,ITI Laouy,5,2016,138
+M3,Sarjapurroad,5,2016,139
+M3,Garve Bhavi Palya,5,2016,140
+M3,HSR Layout,5,2016,142
+M3,HSR Layout,5,2016,152
+M3,Bommanahalli,5,2016,252
+M3,Kudlugate,5,2016,253
+M3,Bellandur,5,2016,254
+M0,HSR Layout,6,2016,255
+M1,Bommanahalli,6,2016,256
+M1,Kudlugate,6,2016,257
+M1,HSR Layout,6,2016,258
+M1,Bommanahalli,6,2016,259
+M1,HSR Layout,6,2016,260
+M1,Sarjapurroad,6,2016,261
+M1,Kudlugate,6,2016,262
+M1,Bellandur,6,2016,263
+M2,Bommanahalli,6,2016,264
+M2,Harlur,6,2016,265
+M2,HSR Layout,6,2016,266
+M2,Electronic City,6,2016,267
+M2,Begur Road,6,2016,268
+M2,Sarjapurroad,6,2016,269
+M1,Kudlugate,6,2016,156
+M2,Harlur,6,2016,159
+M2,Harlur,6,2016,160
+M3,Kadubisanahalli,6,2016,166
+M3,Kodichikkanahalli,6,2016,167
+M3,HSR Layout,6,2016,168
+M3,Harlur,6,2016,169
+M3,Roopena Agrahara,6,2016,170
+M3,Bellandur,6,2016,171
+M3,Bommanahalli,6,2016,172
+M3,Kudlugate,6,2016,173
+M3,Amritha Nagar,6,2016,270
+M3,Bellandur,6,2016,271
+M1,HSR ayout,1,2017,186
+M1,HSR ayout,1,2017,272
+M1,Kodichikkanahalli,1,2017,273
+M1,Bommanahalli,1,2017,274
+M1,Harlur,1,2017,275
+M1,HSR ayout,1,2017,276
+M0,Sunkadakatte,1,2017,277
+M2,Sarjapur Road,1,2017,189
+M2,HSR ayout,1,2017,191
+M2,HsR ayout,1,2017,193
+M2,Somasandra Palya,1,2017,188
+M2,Bommanahalli,1,2017,278
+M2,Kasavanahalli,1,2017,279
+M2,Kasavanahalli,1,2017,280
+M2,Bellandur,1,2017,281
+M2,Kasavanahalli,1,2017,282
+M2,Sarjapur Road,1,2017,283
+M2,BTM Layout,1,2017,190
+M3,Koramangala,1,2017,198
+M3,Bommanahalli,1,2017,32
+M3,HSR ayout,1,2017,2
+M3,HSR ayout,1,2017,3
+M3,Kudlugate,1,2017,4
+M3,Bommanahalli,1,2017,6
+M3,HSR ayout,1,2017,11
+M3,HSR ayout,1,2017,197
+M1,HsR ayout,1,2017,284
+M3,Sarjapur Road,1,2017,285
+M3,Sarjapur Road,1,2017,286
+M0,HSR ayout,1,2017,287
+M1,HSR Layout,2,2017,288
+M1,Somasandrapalya,2,2017,289
+M1,HSR Layout,2,2017,290
+M1,Bommanahalli,2,2017,291
+M1,Bommanahalli,2,2017,292
+M2,HSR Layout,2,2017,206
+M2,HSR Layout,2,2017,293
+M2,Kasavanahalli,2,2017,294
+M2,Iblur Junction,2,2017,295
+M2,Harlur,2,2017,296
+M2,Kasavanahalli,2,2017,297
+M2,Bommanahalli,2,2017,298
+M2,HSR Layout,2,2017,203
+M2,Harlur,2,2017,299
+M2,HSR Layout,2,2017,205
+M2,HSR Layout,2,2017,207
+M3,Sarjapur Road,2,2017,208
+M3,Bellandur,2,2017,210
+M3,Doddakannahalli,2,2017,300
+M3,Singasandra,2,2017,212
+M3,Devarabisanahalli,2,2017,213
+M3,Sarjapur Road,2,2017,215
+M3,Koramangala,2,2017,35
+M3,HSR Layout,2,2017,301
+M3,HSR Layout,2,2017,209
+M3,HSR Layout,2,2017,40
+M3,HSR Layout,2,2017,50
+M1,Kudlugate,2,2017,302
+M1,HSR Layout,2,2017,303
+M1,HSR Layout,2,2017,304
+M1,Kasavanahalli,2,2017,305
+M1,Kudlugate,3,2017,306
+M1,Iblur,3,2017,307
+M1,Kudlugate,3,2017,308
+M2,HSR Layout,3,2017,309
+M2,Sarjpur Road,3,2017,310
+M2,sarjapurroad,3,2017,218
+M2,HSR Layout,3,2017,220
+M2,Kasavanahalli,3,2017,311
+M2,Hongasandra,3,2017,312
+M2,Harlur,3,2017,313
+M2,Harlur,3,2017,314
+M2,Harlur,3,2017,315
+M2,HSR Layout,3,2017,316
+M2,Kaikondrahalli,3,2017,219
+M2,HSR Layout,3,2017,318
+M3,HSR Layout,3,2017,221
+M3,Kudlugate,3,2017,223
+M3,Electronic City,3,2017,224
+M1,HSR Layout,3,2017,319
+M3,Koramangala,3,2017,226
+M3,HSR Layout,3,2017,227
+M3,Bommanahalli,3,2017,228
+M3,BTM 2nd Stage,3,2017,67
+M3,HSR Layout,3,2017,68
+M3,hSR Layout,3,2017,65
+M3,Roopena Agrahara,3,2017,320
+M3,Sarjapurroad,3,2017,222
+M3,Kaikondrahalli,3,2017,69
+M2,HSR Layout,3,2017,321
+M2,HSR Layout,3,2017,322
+M2,Iblur Junction,3,2017,323
+M1,HSR Layout,4,2017,324
+M1,Bommanahalli,4,2017,325
+M1,Bellandur,4,2017,326
+M1,Raysandra,4,2017,327
+M1,Kasavanahalli,4,2017,328
+M1,HSR Layout,4,2017,329
+M1,Singasandra,4,2017,330
+M2,Iblur Junction,4,2017,232
+M2,HSR Layout,4,2017,234
+M2,HSR Layout,4,2017,235
+M2,HSR Layout,4,2017,331
+M2,HSR Layout,4,2017,237
+M2,Bellandur,4,2017,238
+M2,Kasavanahalli,4,2017,332
+M2,Bellandur,4,2017,233
+M3,HSR Layout,4,2017,92
+M3,Bommanahalli,4,2017,94
+M3,Garve Bhavi Palya,4,2017,95
+M3,Hosapalya,4,2017,98
+M3,Sarjapur Road,4,2017,334
+M3,Vivek Nagar,4,2017,335
+M3,garve Bhavi Palya,4,2017,336
+M3,Kasavanahalli,4,2017,337
+M3,Bellandur,4,2017,240
+M3,Bellandur,4,2017,241
+M1,Iblur Junction,4,2017,338
+M1,Garve Bhavi Palya,4,2017,339
+M3,Kasavanahalli,4,2017,340
+M2,Sarjapur Road,4,2017,341
+M2,Devarabisanahalli,4,2017,342
+M1,HSR Layout,5,2017,343
+M1,Virat Nagar,5,2017,344
+M1,Sarjapur Road,5,2017,345
+M1,Koramangala,5,2017,346
+M1,HSR Layout,5,2017,347
+M1,Sarjapur Road,5,2017,348
+M1,Kaikondrahalli,5,2017,349
+M1,Roopena Agrahara,5,2017,350
+M2,HSR Layout,5,2017,351
+M2,HSR Layout,5,2017,352
+M2,Bommanahalli,5,2017,353
+M2,Bellandur,5,2017,354
+M2,Bommanahalli,5,2017,247
+M2,Sarjapur Road,5,2017,246
+M2,Iblur Junction,5,2017,355
+M3,Bommanahalli,5,2017,141
+M3,Hosaroad,5,2017,131
+M3,Harlur,5,2017,252
+M3,HSR Layout,5,2017,253
+M3,Bommanahalli,5,2017,123
+M3,Roopena Agrahara,5,2017,356
+M3,HSR Layout,5,2017,357
+M3,Kudlugate,5,2017,125
+M3,HSR Layout,5,2017,126
+M3,HSR Layout,5,2017,127
+M3,ITI Layout,5,2017,129
+M2,Bommanahalli,5,2017,251
+M1,HSR Layout,5,2017,359
+M3,Bellandur,5,2017,360
+M2,HSR Layout,5,2017,361
+M1,Sarjapur Road,5,2017,362
+M1,HSR Layout,6,2017,255
+M1,HSR Layout,6,2017,363
+M1,Sarjapur Road,6,2017,364
+M1,HSR Layout,6,2017,365
+M1,HSR Layout,6,2017,366
+M1,HSR Layout,6,2017,367
+M1,HSR Layout,6,2017,368
+M2,Kudlugate,6,2017,262
+M2,HSR Layout,6,2017,369
+M2,Bommanahalli,6,2017,256
+M2,Kudlugate,6,2017,257
+M2,Bommanahalli,6,2017,259
+M2,HSR Layout,6,2017,260
+M2,Kudlugate,6,2017,156
+M2,HSR Layout,6,2017,370
+M2,HSR Layout,6,2017,371
+M2,HSR Layout,6,2017,372
+M2,Harlur,6,2017,373
+M3,Bommanahalli,6,2017,374
+M3,HSR Layout,6,2017,266
+M3,Electronic City,6,2017,267
+M3,Begur Road,6,2017,268
+M3,Harlur,6,2017,159
+M3,Harlur,6,2017,160
+M0,Sarjapur Road,6,2017,375
+M2,HSR Layout,6,2017,376
+M1,Bommanahalli,6,2017,377
+M1,Iblur Junction,6,2017,378
+M1,Managamana Palya,6,2017,379
+M0,HSR Layout,6,2017,380
+M1,HSR Layout,6,2017,381
+M1,Hosa Road,1,2018,382
+M1,HSR Layout,1,2018,287
+M1,Sunkadakatte,1,2018,277
+M1,Bommanahalli,1,2018,383
+M0,Hosapalya,1,2018,384
+M1,HSR Layout,1,2018,385
+M2,HSR Layout,1,2018,272
+M2,Bommanahalli,1,2018,274
+M2,Harlur,1,2018,275
+M2,Bommanahalli,1,2018,386
+M2,Somasandrapalya,1,2018,230
+M2,HSR Layout,1,2018,387
+M2,Kasavanhalli,1,2018,388
+M2,Bommanahalli,1,2018,389
+M2,Bommanahalli,1,2018,390
+M2,Bommanahalli,1,2018,391
+M2,HSR Layout,1,2018,276
+M3,Sarjapur Road,1,2018,189
+M3,HsR Layout,1,2018,191
+M3,Bommanahalli,1,2018,278
+M3,Kasavanahalli,1,2018,279
+M3,kasavanahalli,1,2018,280
+M3,Bellandur,1,2018,281
+M3,Kasavanahalli,1,2018,282
+M3,Somasandra Palya,1,2018,188
+M3,Sarjapur Road,1,2018,392
+M1,Bommanahalli,1,2018,393
+M1,Kudlugate,1,2018,394
+M0,Bommanahalli,2,2018,395
+M1,Sarjapur Road,2,2018,396
+M1,HSR Layout,2,2018,397
+M1,Sarjapur Road,2,2018,398
+M1,HSR Layout,2,2018,399
+M2,HSR Layout,2,2018,400
+M2,Kudlugate,2,2018,302
+M2,HSR Layout,2,2018,304
+M2,Kasavanahalli,2,2018,305
+M2,HSR Layout,2,2018,288
+M2,Somasandrapalya,2,2018,289
+M2,HSR Layout,2,2018,290
+M2,Bommanahalli,2,2018,291
+M2,Bommanahalli,2,2018,292
+M3,HSR Layout,2,2018,206
+M3,HSR Layout,2,2018,293
+M3,Kasavanahalli,2,2018,294
+M3,Iblur Junction,2,2018,295
+M3,Harlur,2,2018,296
+M3,Kasavanahalli,2,2018,297
+M3,Bommanahalli,2,2018,298
+M3,HSR Layout,2,2018,203
+M3,Harlur,2,2018,299
+M3,HSR Layout,2,2018,207
+M3,Sarjapur Road,2,2018,208
+M3,HSR Layout,2,2018,209
+M3,HSR Layout,2,2018,401
+M2,Harlur,2,2018,402
+M1,HSR Layout,3,2018,403
+M0,HSR Layout,3,2018,404
+M1,Kudlugate,3,2018,405
+M1,HSR Layout,3,2018,406
+M1,HSR Layout,3,2018,407
+M1,Bommanahalli,3,2018,408
+M1,kasavanahalli,3,2018,409
+M2,Kudlugate,3,2018,306
+M2,Iblur,3,2018,307
+M2,Kudlugate,3,2018,308
+M2,Harlur,3,2018,410
+M2,HSR Layout,3,2018,411
+M2,Kasavanahalli,3,2018,412
+M2,Roopena Agrahara,3,2018,413
+M3,HSR Layout,3,2018,309
+M3,Sarjapur Road,3,2018,310
+M3,HsR Layout,3,2018,220
+M3,Kasavanahalli,3,2018,311
+M3,Harlur,3,2018,313
+M3,Harlur,3,2018,314
+M3,Harlur,3,2018,315
+M3,Kaikondrahalli,3,2018,219
+M3,HSR Layout,3,2018,318
+M3,HSR Layout,3,2018,321
+M3,HSR Layout,3,2018,322
+M3,Iblur Junction,3,2018,323
+M3,HSR Layout,3,2018,316
+M1,HSR Layout,3,2018,414
+M0,HSR Layout,4,2018,415
+M1,HSR Layout,4,2018,416
+M1,Teachers Colony,4,2018,417
+M2,Sarjapur Road,4,2018,418
+M1,Harlur,4,2018,419
+M2,HSR Layout,4,2018,324
+M2,Bommanahali,4,2018,325
+M2,Bellandur,4,2018,326
+M2,Rayasandra,4,2018,327
+M2,Kasavanahalli,4,2018,328
+M2,HSR Layout,4,2018,329
+M2,Singasandra,4,2018,330
+M2,Iblur Junction,4,2018,338
+M2,HSR Layout,4,2018,420
+M2,Somasandrapalya,4,2018,421
+M2,HSR Layout,4,2018,422
+M2,Garvebhavi Palya,4,2018,339
+M2,Iblur Junction,4,2018,232
+M3,HSR Layout,4,2018,235
+M3,HSR Layout,4,2018,331
+M3,HSR Layout,4,2018,237
+M3,Kasavanahalli,4,2018,332
+M3,Bellandur,4,2018,233
+M3,Sarjapur Road,4,2018,334
+M3,Sarjapur Road,4,2018,341
+M3,Devarabisanahalli,4,2018,342
+M3,Sarjapur Road,4,2018,423
+M3,HSR Layout,4,2018,424
+M2,Sarjapur Road,4,2018,425
+M1,HSR Layout,5,2018,426
+M1,HSR Layout,5,2018,427
+M1,Sarjapur Road,5,2018,428
+M1,HSR Layout,5,2018,429
+M1,Kasavanahalli,5,2018,430
+M1,Hongasandra,5,2018,431
+M1,HSR Layout,5,2018,432
+M2,HSR Layout,5,2018,343
+M2,Sarjapur Road,5,2018,345
+M2,Koramangala,5,2018,346
+M2,HSR Layout,5,2018,347
+M2,Sarjapur Road,5,2018,348
+M2,Kaikondrahalli,5,2018,349
+M2,Roopena Agrahara,5,2018,433
+M2,Sarjapur Road,5,2018,362
+M2,Kudlu gate,5,2018,444
+M2,HSR Layout,5,2018,359
+M3,HSR Layout,5,2018,351
+M3,Bommanahalli,5,2018,353
+M3,Bellandur,5,2018,354
+M3,Bommanahalli,5,2018,247
+M3,Sarjapur Road,5,2018,246
+M3,Iblur Junction,5,2018,355
+M3,Hosa Road,5,2018,131
+M3,sarjapurroad,5,2018,218
+M3,Sarjapur Road,5,2018,
+M3,Bommanahalli,5,2018,251
+M0,Hongasandra,6,2018,445
+M1,HSR Layout,6,2018,446
+M1,Somasandrapalya,6,2018,447
+M2,Bommanahalli,6,2018,448
+M1,HSR Layout,6,2018,380
+M1,Sarjapur Road,6,2018,448
+M2,Bommanahalli,6,2018,449
+M2,HSR Layout,6,2018,255
+M2,Sarjapur Road,6,2018,364
+M2,HSR Layout,6,2018,365
+M2,HSR Layout,6,2018,366
+M2,HSR Layout,6,2018,367
+M2,HSR Layout,6,2018,368
+M2,Iblur Junction,6,2018,378
+M2,Mangamana Palya,6,2018,379
+M3,HSR Layout,6,2018,369
+M3,Bommanahalli,6,2018,256
+M3,Kudlugate,6,2018,257
+M3,Bommanahalli,6,2018,259
+M3,Kudlugate,6,2018,156
+M3,HSR Layout,6,2018,370
+M3,HSR Layout,6,2018,371
+M3,HSR Layout,6,2018,372
+M3,Harlur,6,2018,373
+M3,HSR Layout,6,2018,376
+M3,Kudlugate,6,2018,262
+M1,HSR Layout,6,2018,450
+M1,HSR Layout,6,2018,451
+M1,Hosa Road,1,2019,452
+M2,Sunkadakatte,1,2019,277
+M1,Harlur,1,2019,453
+M1,Hosapalya,1,2019,384
+M2,HSR Layout,1,2019,454
+M3,HSR Layout,1,2019,272
+M3,Bommanahalli,1,2019,274
+M3,Harlur,1,2019,275
+M3,Bommanahalli,1,2019,386
+M3,Somasandra Palya,1,2019,230
+M3,Kaikondrahalli,1,2019,388
+M3,Bommanahalli,1,2019,389
+M3,Bommanahalli,1,2019,391
+M3,HSR Layout,1,2019,276
+M2,Bommanahalli,1,2019,393
+M2,Kudlu Gate,1,2019,394
+M3,Bommanahalli,1,2019,390
+M3,Hosapalya,1,2019,455
+M2,HSR Layout,1,2019,456
+M3,HSR Layout,1,2019,457
+M2,Sarjapurroad,1,2019,458
+M1,Virat Nagar,1,2019,383
+M0,HSR Layout,1,2019,459
+M1,Mangamanapalya,1,2019,460
+M1,HSR Layout,1,2019,461
+M1,Bommanahalli,2,2019,395
+M2,Sarjapur Road,2,2019,396
+M2,HSR Layout,2,2019,397
+M2,Sarjapur Road,2,2019,398
+M2,HSR Layout,2,2019,399
+M3,HSR Layout,2,2019,400
+M3,Kudlu gate,2,2019,302
+M2,Hosa Road,2,2019,382
+M3,Kaikondarahalli,2,2019,305
+M3,HSR Layout,2,2019,288
+M3,HSR Layout,2,2019,289
+M3,HSR Layout,2,2019,290
+M3,Bommanahalli,2,2019,291
+M3,Bommanahalli,2,2019,292
+M3,HSR Layout,2,2019,293
+M2,Harlur,2,2019,402
+M1,HSR Layout,2,2019,462
+M1,Bellandur,2,2019,463
+M1,Teachers Colony,2,2019,464
+M1,Bommanahalli,2,2019,465
+M0,Iblur Junction,2,2019,466
+M3,Sarjapur Road,2,2019,467
+M1,Bommanahalli,2,2019,468
+M1,HSR Layout,3,2019,469
+M2,Kudlugate,3,2019,405
+M2,HSR Layout,3,2019,406
+M2,HSR Layout,3,2019,407
+M2,Bommanahalli,3,2019,408
+M2,Kaikondrahalli,3,2019,409
+M3,Somasandrapalya,3,2019,306
+M3,Sarjapur Road,3,2019,307
+M3,Kudlugate,3,2019,308
+M3,HSR Layout,3,2019,410
+M3,Kaikondrahalli,3,2019,412
+M2,Roopena Agrahara,3,2019,413
+M2,Kudlugate,3,2019,414
+M2,Harlur,3,2019,470
+M1,Harlur,3,2019,471
+M1,Bommanahalli,3,2019,472
+M1,Bommanahalli,3,2019,473
+M2,Sarjapur Road,3,2019,474
+M1,HSR Layout,3,2019,475
+M2,Sarjapur Road,3,2019,476
+M1,Bommanahalli,3,2019,477
+M2,Teachers Colony,4,2019,417
+M3,Sarjapur Road,4,2019,418
+M2,Harlur,4,2019,419
+M3,HSR Layout,4,2019,324
+M3,Bommanahalli,4,2019,325
+M3,Rayasandra,4,2019,327
+M3,Kaikondrahalli,4,2019,328
+M3,HSR Layout,4,2019,329
+M3,Kudlugate,4,2019,330
+M3,Iblur Junction,4,2019,338
+M3,HSR Layout,4,2019,420
+M3,Somasandrapalya,4,2019,421
+M3,HSR Layout,4,2019,422
+M3,IBlur Junction,4,2019,232
+M3,Sarjapur Road,4,2019,425
+M1,HSR Layout,4,2019,478
+M1,Bommanahalli,4,2019,479
+M1,HSR Layout,4,2019,480
+M1,Kudlugate,4,2019,481
+M2,Sarjapur Road,4,2019,482
+M2,HSR Layout,4,2019,483
+M3,HSR Layout,4,2019,304
+M1,HSR Layout,4,2019,484
+M1,Sarjapur Road,4,2019,485
+M1,Harlur,4,2019,486
+M2,HSR Layout,5,2019,427
+M3,HSR Layout,5,2019,429
+M2,Kasavanahalli,5,2019,430
+M2,Somasandra Palya,5,2019,432
+M3,Sarjapur Road,5,2019,345
+M3,Koramangala,5,2019,346
+M3,Sarjapur Road,5,2019,348
+M3,Kaikondrahalli,5,2019,349
+M3,Roopena Agrahara,5,2019,433
+M3,Sarjapur Road,5,2019,362
+M3,Kudlugate,5,2019,444
+M3,HSR Layout,5,2019,359
+M3,Bommanahalli,5,2019,247
+M3,Iblur Junction,5,2019,355
+M2,Kudlugate,5,2019,487
+M3,Sarjapur Road,5,2019,488
+M2,HSR Layout,5,2019,489
+M2,Kudlugate,5,2019,490
+M2,Bommanahalli,5,2019,491
+M3,HSR Layout,5,2019,492
+M0,HSR Layout,5,2019,493
+M1,Managamana Palya,5,2019,494
+M1,HSR Layout,5,2019,495
+M1,Bellandur,5,2019,496
+M1,Hongasandra,6,2019,445
+M2,HSR Layout,6,2019,446
+M2,Somasandrapalya,6,2019,447
+M2,HSR Layout,6,2019,380
+M2,Sarjapurroad,6,2019,448
+M3,Bommanahalli,6,2019,449
+M3,HSR Layout,6,2019,255
+M3,Sarjapurroad,6,2019,364
+M3,HSR Layout,6,2019,366
+M3,HSR Layout,6,2019,367
+M3,HSR Layout,6,2019,368
+M3,Iblur Juncton,6,2019,378
+M3,Managamana Palya,6,2019,379
+M1,Sarjapurroad,6,2019,497
+M3,Harlur,6,2019,498
+M3,HSR Layout,6,2019,499
+M1,Sarjapurroad,6,2019,500
+M1,HSR Layout,6,2019,501
+M2,Harlur,6,2019,502
+M1,Kaikondnahalli,6,2019,503
+M0,Bommanahalli,6,2019,504
+M0,HSR Layout,6,2019,505
+M2,Bommanahalli,6,2019,506
+M1,Sarjapurroad,6,2019,507
