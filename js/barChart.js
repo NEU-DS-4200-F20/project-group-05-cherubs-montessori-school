@@ -5,7 +5,7 @@ function barChart() {
         top: 60,
         left: 50,
         right: 30,
-        bottom: 35
+        bottom: 50
       },
       width = 800 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
@@ -27,10 +27,12 @@ function barChart() {
         //Groups to divide the bar graphs into to make stacked bar graph.
         var keys = ["M0", "M1", "M2", "M3"]
     
+        //make x axis
         let x = d3.scaleBand().domain(data.map(function(d) { return d.Starting_Year; })).range([0, width]).padding(0.4)
     
         g.append("g").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(x))
     
+        //make y axis
         let y = d3.scaleLinear().range([height, 0])
         y.domain([0, getMax(data)])
     
@@ -38,6 +40,7 @@ function barChart() {
           return d;}))
     
     
+        //define the colors to use
         let color = d3.scaleOrdinal().domain(keys).range(["steelblue", "darkorange", "lightblue", "darkblue"])
     
         //Making stacked data
@@ -72,9 +75,16 @@ function barChart() {
           .text("Number of Students")
     
         //Appending the X axis label for the bar chart.
+
         svg.append("text")
           .attr("x", width / 2 + margin.top)
           .attr("y", margin.bottom)
+          .attr("text-anchor" ,"middle")
+          .text("Student population breakdown by grade per year")
+
+        svg.append("text")
+          .attr("x", width / 2 + margin.top)
+          .attr("y", height + 100)
           .attr("text-anchor" ,"middle")
           .text("Academic Year")
     

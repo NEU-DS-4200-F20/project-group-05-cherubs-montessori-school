@@ -5,7 +5,7 @@ function gradeBreakDown() {
         top: 60,
         left: 50,
         right: 30,
-        bottom: 35
+        bottom: 50
       },
       width = 800 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;

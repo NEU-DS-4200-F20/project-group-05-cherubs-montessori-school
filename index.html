@@ -48,7 +48,7 @@
     
     <h1>Visualization</h1>
     
-    <p>This is a static visualization that shows the number of students in the school per year divided by grade. The grades range from M0 to M3.</p>
+    <p>Below are static visualization combining different datasets.</p>
 
     
   </div>
@@ -58,7 +58,7 @@
     <!-- Change viewbox to whatever you want, e.g., '0 0 1000 6000' This determines your aspect ratio and coordinate system -->    
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
     <svg id='vis-svg-1'
-      preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1000 1000' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+      preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
       
       
       <!-- <text x='30%' y='35%' text-anchor='middle'>A</text>
@@ -75,7 +75,13 @@
 
   <div class='vis-holder2'>
     <svg id='vis-svg-2'
-    preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1000 1000' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+    preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+  </svg>
+  </div>
+
+  <div class='vis-holder3'>
+    <svg id='vis-svg-3'
+    preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
   </svg>
   </div>
   
@@ -114,7 +120,12 @@
       <li>
         <a href='https://www.d3-graph-gallery.com/graph/barplot_stacked_basicWide.html'>
         Basic stacked barplot</a>
-        describes how to build a basic stacked barplot
+        describes how to build a basic stacked barplot.
+      </li>
+      <li>
+        <a href='https://bl.ocks.org/interwebjill/8122dd08da9facf8c6ef6676be7da03f'>
+        Multiple Area chart with D3</a>
+        describes how to build a multiple area chart using d3.
       </li>
     </ul>
   </div>
@@ -124,5 +135,6 @@
   <script src='js/visualization.js'></script>
   <script src='js/barChart.js'></script>
   <script src='js/gradeBreakdown.js'></script>
+  <script src='js/areaChart.js'></script>
 </body>
 </html>
