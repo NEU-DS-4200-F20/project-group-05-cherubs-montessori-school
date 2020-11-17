@@ -16,7 +16,7 @@
 
     // Create a stacked bar chart given 
     // a div id selector to put our svg in; and the data to use.
-    let studentBarChart = gradeBreakDown()
+    let gradebreakdown = gradeBreakDown()
       .selectionDispatcher(d3.dispatch(dispatchString))
       ('#vis-svg-3', data);
   })
