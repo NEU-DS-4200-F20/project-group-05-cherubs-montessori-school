@@ -15,6 +15,7 @@ function barChart() {
     // specified by the selector using the given data
       function chart(selector, data) {
         let newData = mainDict(data)
+        let locationData = countLocation(data, location)
         let svg = d3.select(selector)
         .append('svg')
         .attr('preserveAspectRatio', 'xMidYMid meet') 
@@ -117,6 +118,65 @@ function barChart() {
           .attr("dy", ".35em")
           .style("text-anchor", "end")
           .text(function(d) { return d; });
+          
+          //http://duspviz.mit.edu/d3-workshop/transitions-animation/
+          //http://bl.ocks.org/duspviz-mit/649ce2a2f2de1f7feee6d466824708e8
+          
+
+          function countLocation(data, location) {
+            var locationDict = {}
+            for (d in data) {
+              if(locationDict[location] === undefined) {
+                locationDict[location] = 0;
+              } else {
+              locationDict[location] = locationDict[location] + 1;
+              }
+            }
+            return locationDict
+          }
+          
+          d3.select("#studentLocation").on("click", function() {
+            console.log("test1")
+            console.log(newData)
+            console.log(locationData)
+            d3.csv("data/Revised Student Data/Student Data Cleaned Combined - env_list_combined (1).csv", function(d) {
+              console.log("hi")
+              return{
+                Location : d.Location
+              }
+            }, function(error, rows) {
+              countLocation(d,d.Location)
+              console.log(d.Location)
+              console.log(locationDict[location])
+              ratData = 850;
+              console.log(ratData);
+              updateData();
+            });
+          });
+
+          function updateData() {
+            var maxValue = d3.max(ratData, function(d) { return locationDict[location];} );
+          
+            // update the scale to get the new max value
+            yScale = d3.scaleLinear()
+            .domain([0, maxValue])
+            .range([0, 800]);
+          
+            // select all the rectangles and transition to new 'y' and 'height' properties
+            svg.selectAll("rect")
+              .data(ratData)
+              .transition()
+              .attr("y", function(d){
+                return h - yScale(locationDict[d.location]) - 5; // Set y coordinate of rect using the y scale
+              })
+              .attr("height", function(d) {
+                console.log(locationDict[d.location]);
+                return yScale(locationDict[d.location]);
+              })
+          
+          }
+
+ 
 
           return chart
         
