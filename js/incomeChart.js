@@ -3,8 +3,8 @@
 function incomeChart() {
     console.log("hey")
     let margin = {
-        top: 60,
-        left: 50,
+        top: 0,
+        left: 0,
         right: 30,
         bottom: 50
       },

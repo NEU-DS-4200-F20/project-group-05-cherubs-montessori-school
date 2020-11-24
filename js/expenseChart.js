@@ -1,15 +1,14 @@
 // Initialize a stacked bar chart. Modeled after Mike Bostock's
 // Reusable Chart framework https://bost.ocks.org/mike/chart/
 function expenseChart() {
-    console.log("hey")
     let margin = {
-        top: 60,
-        left: 50,
+        top: 0,
+        left: 0,
         right: 30,
         bottom: 50
       },
       width = 800 - margin.left - margin.right,
-      height = 600 - margin.top - margin.bottom;
+      height = 600 - margin.top - margin.bottom,
       dispatcher = null;
 
     // Create the area chart by adding an svg to the div with the id 
@@ -73,13 +72,6 @@ function expenseChart() {
         'School Maintenance',
         'Property Tax',
         'Repairs & Maintenances']
-        // 'Office Maintenance',
-        // 'Water Charges',
-        // 'Vehicle Maintenance',
-        // 'Security Charges',
-        // 'Festival & Celabration Exp',
-        // 'Legal Fees',
-        // 'Depreciation']
 
         var stackedData = d3.stack()
         .keys(keys)(newData)
@@ -89,55 +81,39 @@ function expenseChart() {
         .enter()
         .append("path")
         .attr("fill", function(d) {
-            console.log(d)
             name = d.key;
-            console.log(name)
             return z(name)})
         .attr("d", d3.area()
         .x(function(d,i) { 
-            console.log(d)
+            console.log(x(d.data.year))
             return x(d.data.year)})
         .y0(function(d) {return y(d[0])})
         .y1(function(d) {return y(d[1])})
         )
         .on("click", function (d, i) {
             console.log(d)
+            console.log(i)
+
+            let expenseType = i.key
+            let years = [2015, 2016, 2017, 2018, 2019]
+            let result = []
+            for (let x = 0; x < years.length; x++) {
+                result.push({
+                    "year": years[x],
+                    "type": expenseType,
+                    "amount": i[x].data[expenseType]
+                })
+            }
+            console.log(result)
+            console.log(expenseType)
+
             console.log(this)
             d3.select(this).classed('selected')
             let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-            dispatcher.call(dispatchString, this, svg.selectAll('.selected').data());
+            console.log(dispatchString)
+            dispatcher.call(dispatchString, this, result);
           })
-        // .attr("height", function (d) {
-        //     console.log(d)
-        //     return y(d[0]) - y(d[1]);
-        //   })
-
-        // let area = d3.area()
-        //     .curve(d3.curveMonotoneX)
-        //     .x(function(d) { return x(d.year); })
-        //     .y0(y(0))
-        //     .y1(function(d) { return y(d.amount); })
-
-        // let columns = columnNames.concat([]).map(function(id) {
-        //     return {
-        //         id: id,
-        //         values: newData.map(function(d) {
-        //             return {year: d.year, amount: d[id]}
-        //         })
-        //     }
-        // })
-        // console.log(columns)
-        // z.domain(columns.map(function(a) { return a.id }))
-
-        // let column = g.selectAll(".area")
-        //     .data(columns)
-        //     .enter().append("g")
-        //     .attr("class", function(d) { return `area ${d.id}`;})
-
-        // column.append("path")
-        //     .attr("d", function(d) {return area(d.values)})
-        //     .style("fill", function(d) { return z(d.id) })
-    
+        
         
         // Appending the Y axis label for the bar chart.
           svg.append("text")
@@ -226,7 +202,6 @@ function expenseChart() {
             let result = 0
             for (let i = 0; i < info.length; i++) {
                 sum = parseInt(info[i]['Printing & Stationery']) + parseInt(info[i]['Accounting Charges']) + parseInt(info[i]['School Maintenance']) + parseInt(info[i]['Property Tax']) + parseInt(info[i]['Repairs & Maintenances'])
-                // console.log(sum)
                 if(sum > result) {
                     result = sum
                 }
@@ -259,9 +234,9 @@ function expenseChart() {
 
         chart.selectionDispatcher = function (_) {
             console.log(dispatcher)
-        if (!arguments.length) return dispatcher;
-        dispatcher = _;
-        return chart;
+            if (!arguments.length) return dispatcher;
+            dispatcher = _;
+            return chart;
         };
 
         chart.updateSelection = function (selectedData) {

@@ -37,6 +37,7 @@ function areaChart() {
             .call(d3.axisBottom(x))
     
         //make y axis
+        console.log(getMax(data))
         let y = d3.scaleLinear().range([height, 0])
         y.domain([0, getMax(data)])
     
@@ -197,20 +198,65 @@ function areaChart() {
             }
         }
 
+        function createnewPath(data) {
+            let svg = d3.select("#vis-svg-2")
+
+
+            let x = d3.scaleBand().domain(data.map(function(d) { return d.Year; })).range([0, width]).padding(1)
+
+            let y = d3.scaleLinear().range([490, 0])
+
+            y.domain([0, 15698100])
+
+            let color = d3.scaleOrdinal()
+            .domain(["Type"])
+            .range(["red"]);
+
+            let z = color
+
+            let area = d3.area()
+            .curve(d3.curveMonotoneX)
+            .x(function(d) { return x(d.year); })
+            .y0(y(0))
+            .y1(function(d) { return y(d.amount); })
+
+            let columns = ["Type"].map(function(id) {
+                return {
+                    id: id,
+                    values: data.map(function(d) {
+                        return {year: d.year, amount: d[id]}
+                    })
+                }
+            })
+    
+            z.domain(columns.map(function(a) { return a.id }))
+    
+            let column = svg.selectAll(".area")
+                .data(columns)
+                .enter().append("g")
+                .attr("class", function(d) { return `area ${d.id}`;})
+    
+            column.append("path")
+                .attr("d", function(d) {return area(d.values)})
+                .style("fill", function(d) { return z(d.id) })
+        }
+
         chart.selectionDispatcher = function (_) {
-        if (!arguments.length) return dispatcher;
-        dispatcher = _;
-        return chart;
+            if (!arguments.length) return dispatcher;
+            dispatcher = _;
+            return chart;
         };
 
         chart.updateSelection = function (selectedData) {
-            console.log(selectedData)
+            console.log("profit_chart selected data:", selectedData)
             if (!arguments.length) return;
+            createnewPath(selectedData)
+            
         
             // Select an element if its datum was selected
-            selectableElements.classed('selected', d =>
-              selectedData.includes(d)
-            );
+            // selectableElements.classed('selected', d =>
+            //   selectedData.includes(d)
+            // );
           };
 
         return chart

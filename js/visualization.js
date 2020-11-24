@@ -28,7 +28,7 @@
   // })
   d3.csv("data/Revised Income Expenditure/Combined Income Expenditure - Sheet1.csv").then(data => {
     const dispatchString = 'selectionUpdated';
-    const dispatchString_sp_to_lc = 'selectionUpdated.sp-to-lc'
+    // const dispatchString_sp_to_lc = 'selectionUpdated.sp-to-lc'
 
     // Create a stacked bar chart given 
     // a div id selector to put our svg in; and the data to use.
@@ -40,9 +40,7 @@
     .selectionDispatcher(d3.dispatch(dispatchString))
     ('#vis-svg-2', data);
 
-    // console.log("heyyyy")
-
-    expenseAreaChart.selectionDispatcher().on(dispatchString_sp_to_lc, profitAreaChart.updateSelection);
+    expenseAreaChart.selectionDispatcher().on(dispatchString, profitAreaChart.updateSelection(data));
   })
   d3.csv("data/Revised Income Expenditure/Combined Income Expenditure - Sheet1.csv").then(data => {
     const dispatchString = 'selectionUpdated';
