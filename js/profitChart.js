@@ -11,11 +11,13 @@ function areaChart() {
       width = 800 - margin.left - margin.right,
       height = 600 - margin.top - margin.bottom;
       dispatcher = null;
+      selectableElements = d3.select(null)
 
     // Create the area chart by adding an svg to the div with the id 
     // specified by the selector using the given data
       function chart(selector, data) {
         let newData = createTable(data)
+        console.log(newData)
         let svg = d3.select(selector)
         .append('svg')
         .attr('preserveAspectRatio', 'xMidYMid meet') 
@@ -200,6 +202,16 @@ function areaChart() {
         dispatcher = _;
         return chart;
         };
+
+        chart.updateSelection = function (selectedData) {
+            console.log(selectedData)
+            if (!arguments.length) return;
+        
+            // Select an element if its datum was selected
+            selectableElements.classed('selected', d =>
+              selectedData.includes(d)
+            );
+          };
 
         return chart
 }

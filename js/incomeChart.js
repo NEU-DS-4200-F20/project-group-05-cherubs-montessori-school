@@ -16,6 +16,9 @@ function incomeChart() {
     // specified by the selector using the given data
       function chart(selector, data) {
         let newData = createTable(data)
+        console.log(newData)
+        let newmax = getnewMax(data)
+        console.log(newmax)
         let svg = d3.select(selector)
         .append('svg')
         .attr('preserveAspectRatio', 'xMidYMid meet') 
@@ -35,7 +38,7 @@ function incomeChart() {
     
         //make y axis
         let y = d3.scaleLinear().range([height, 0])
-        y.domain([0, getMax(data)])
+        y.domain([0, newmax])
     
         g.append("g")
             .attr("class", "axis axis--y")
@@ -47,41 +50,44 @@ function incomeChart() {
         let columnNames = ['Application Fees',
         'Day Care Fees',
         'Interest',
-        'Montessori Academic Fees',
         'Summer camp fees',
         'Sale of Alto Car']
 
         let color = d3.scaleOrdinal()
-        .domain(columnNames.concat([]))
-              .range(['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4']);
+        .domain(columnNames)
+              .range(['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231']);
 
         let z = color
 
-        let area = d3.area()
-            .curve(d3.curveMonotoneX)
-            .x(function(d) { return x(d.year); })
-            .y0(y(0))
-            .y1(function(d) { return y(d.amount); })
+        let keys = ['Application Fees',
+        'Day Care Fees',
+        'Interest',
+        'Summer camp fees',
+        'Sale of Alto Car']
 
-        let columns = columnNames.concat([]).map(function(id) {
-            return {
-                id: id,
-                values: newData.map(function(d) {
-                    return {year: d.year, amount: d[id]}
-                })
-            }
-        })
-        console.log(columns)
-        z.domain(columns.map(function(a) { return a.id }))
+        var stackedData = d3.stack()
+        .keys(keys)(newData)
 
-        let column = g.selectAll(".area")
-            .data(columns)
-            .enter().append("g")
-            .attr("class", function(d) { return `area ${d.id}`;})
-
-        column.append("path")
-            .attr("d", function(d) {return area(d.values)})
-            .style("fill", function(d) { return z(d.id) })
+        svg.selectAll("mylayers")
+        .data(stackedData)
+        .enter()
+        .append("path")
+        .attr("fill", function(d) {
+            console.log(d)
+            name = d.key;
+            console.log(name)
+            return z(name)})
+        .attr("d", d3.area()
+        .x(function(d,i) { 
+            console.log(d)
+            return x(d.data.year)})
+        .y0(function(d) {return y(d[0])})
+        .y1(function(d) {return y(d[1])})
+        )
+        .attr("height", function (d) {
+            console.log(d)
+            return y(d[0]) - y(d[1]);
+          })
     
         
         // Appending the Y axis label for the bar chart.
@@ -149,13 +155,27 @@ function incomeChart() {
                     'Application Fees': getAmount(year, data, 'Application Fees'),
                     'Day Care Fees': getAmount(year, data, 'Day Care Fees'),
                     'Interest': getAmount(year, data, 'Interest'),
-                    'Montessori Academic Fees': getAmount(year, data, 'Montessori Academic Fees'),
                     'Summer camp fees': getAmount(year, data, 'Summer camp fees'),
                     'Sale of Alto Car': getAmount(year, data, 'Sale of Alto Car'),
                     'Total Income': getAmount(year, data, 'Total Income')
                 })
             }
             return inputData
+        }
+
+        function getnewMax(data) {
+            let info = createTable(data)
+            let sum = 0
+            let result = 0
+            for (let i = 0; i < info.length; i++) {
+                sum = parseInt(info[i]['Application Fees']) + parseInt(info[i]['Day Care Fees']) + parseInt(info[i]['Interest']) + parseInt(info[i]['Summer camp fees']) + parseInt(info[i]['Sale of Alto Car'])
+                // console.log(sum)
+                if(sum > result) {
+                    result = sum
+                }
+                sum = 0
+            }
+            return result
         }
 
         function getAmount(year, data, name) {

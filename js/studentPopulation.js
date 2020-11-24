@@ -143,23 +143,6 @@ function barChart() {
     let tooltip = d3.select("div.tooltip2")
 
 
-    //         	// recreate the mouseovers with the new data
-    // svg.selectAll("rect")
-    // .on("mouseover", function(d){
-    //   return tooltip.style("visibility", "visible").text(d.year + ": " + d.rats);
-    // })
-    // .on("mousemove", function(d){
-    //   return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px").text(d.city + ": " + d.rats);
-    // })
-    // .on("mouseout", function(d){
-    //   return tooltip.style("visibility", "hidden");
-    // });
-
-    //http://duspviz.mit.edu/d3-workshop/transitions-animation/
-    //http://bl.ocks.org/duspviz-mit/649ce2a2f2de1f7feee6d466824708e8
-
-
-
     function updateLocationData() {
 
       // clear the svg to place the new graph
@@ -184,6 +167,7 @@ function barChart() {
         , "ITI Layout", "other"];
 
       let newcolor = d3.scaleOrdinal().domain(newkeys).range(["steelblue", "darkorange", "lightblue", "darkblue", "red", "yellow", "black", "green", "orange", "pink", "grey", "purple"])
+
 
       let newStackedData = d3.stack().keys(newkeys)(newerData)
 

@@ -35,7 +35,7 @@ function expenseChart() {
     
         //make y axis
         let y = d3.scaleLinear().range([height, 0])
-        y.domain([0, getMax(data)])
+        y.domain([0, getnewMax(data)])
     
         g.append("g")
             .attr("class", "axis axis--y")
@@ -45,61 +45,98 @@ function expenseChart() {
 
             
     
-        let columnNames = ['Salaries',
-        'ElectricityCharges',
-        'Advertisement',
-        'BankCharges',
-        'Bonus',
-        'Business Promotion Exp',
-        'Telephone exp',
-        'Travelling Exp',
+        let columnNames = [
         'Printing & Stationery',
         'Accounting Charges',
         'School Maintenance',
         'Property Tax',
-        'Repairs & Maintenances',
-        'Office Maintenance',
-        'Water Charges',
-        'Vehicle Maintenance',
-        'Security Charges',
-        'Festival & Celabration Exp',
-        'Legal Fees',
-        'Depreciation']
+        'Repairs & Maintenances']
+        // 'Office Maintenance',
+        // 'Water Charges',
+        // 'Vehicle Maintenance',
+        // 'Security Charges',
+        // 'Festival & Celabration Exp',
+        // 'Legal Fees',
+        // 'Depreciation']
 
         let color = d3.scaleOrdinal()
         .domain(columnNames.concat([]))
-              .range(['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231',
-               '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff',
-                '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1', '#000075',
-                 '#808080', '#ffffff', '#000000']);
+              .range(['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231']);
+            //    '#911eb4', '#46f0f0', '#f032e6', '#bcf60c', '#fabebe', '#008080', '#e6beff']);
+
+        // let z = color
 
         let z = color
 
-        let area = d3.area()
-            .curve(d3.curveMonotoneX)
-            .x(function(d) { return x(d.year); })
-            .y0(y(0))
-            .y1(function(d) { return y(d.amount); })
+        let keys = ['Printing & Stationery',
+        'Accounting Charges',
+        'School Maintenance',
+        'Property Tax',
+        'Repairs & Maintenances']
+        // 'Office Maintenance',
+        // 'Water Charges',
+        // 'Vehicle Maintenance',
+        // 'Security Charges',
+        // 'Festival & Celabration Exp',
+        // 'Legal Fees',
+        // 'Depreciation']
 
-        let columns = columnNames.concat([]).map(function(id) {
-            return {
-                id: id,
-                values: newData.map(function(d) {
-                    return {year: d.year, amount: d[id]}
-                })
-            }
-        })
-        console.log(columns)
-        z.domain(columns.map(function(a) { return a.id }))
+        var stackedData = d3.stack()
+        .keys(keys)(newData)
 
-        let column = g.selectAll(".area")
-            .data(columns)
-            .enter().append("g")
-            .attr("class", function(d) { return `area ${d.id}`;})
+        svg.selectAll("mylayers")
+        .data(stackedData)
+        .enter()
+        .append("path")
+        .attr("fill", function(d) {
+            console.log(d)
+            name = d.key;
+            console.log(name)
+            return z(name)})
+        .attr("d", d3.area()
+        .x(function(d,i) { 
+            console.log(d)
+            return x(d.data.year)})
+        .y0(function(d) {return y(d[0])})
+        .y1(function(d) {return y(d[1])})
+        )
+        .on("click", function (d, i) {
+            console.log(d)
+            console.log(this)
+            d3.select(this).classed('selected')
+            let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+            dispatcher.call(dispatchString, this, svg.selectAll('.selected').data());
+          })
+        // .attr("height", function (d) {
+        //     console.log(d)
+        //     return y(d[0]) - y(d[1]);
+        //   })
 
-        column.append("path")
-            .attr("d", function(d) {return area(d.values)})
-            .style("fill", function(d) { return z(d.id) })
+        // let area = d3.area()
+        //     .curve(d3.curveMonotoneX)
+        //     .x(function(d) { return x(d.year); })
+        //     .y0(y(0))
+        //     .y1(function(d) { return y(d.amount); })
+
+        // let columns = columnNames.concat([]).map(function(id) {
+        //     return {
+        //         id: id,
+        //         values: newData.map(function(d) {
+        //             return {year: d.year, amount: d[id]}
+        //         })
+        //     }
+        // })
+        // console.log(columns)
+        // z.domain(columns.map(function(a) { return a.id }))
+
+        // let column = g.selectAll(".area")
+        //     .data(columns)
+        //     .enter().append("g")
+        //     .attr("class", function(d) { return `area ${d.id}`;})
+
+        // column.append("path")
+        //     .attr("d", function(d) {return area(d.values)})
+        //     .style("fill", function(d) { return z(d.id) })
     
         
         // Appending the Y axis label for the bar chart.
@@ -164,31 +201,38 @@ function expenseChart() {
                 let year = years[i]
                 inputData.push({
                     'year': year,
-                    'Salaries': getAmount(year, data, 'Salaries'),
-                    'ElectricityCharges': getAmount(year, data, 'ElectricityCharges'),
-                    'Advertisement': getAmount(year, data, 'Advertisement'),
-                    'BankCharges': getAmount(year, data, 'BankCharges'),
-                    'Bonus': getAmount(year, data, 'Bonus'),
-                    'Business Promotion Exp': getAmount(year, data, 'Business Promotion Exp'),
-                    'Telephone exp': getAmount(year, data, 'Telephone exp'),
-                    'Travelling Exp': getAmount(year, data, 'Travelling Exp'),
                     'Printing & Stationery': getAmount(year, data, 'Printing & Stationery'),
                     'Accounting Charges': getAmount(year, data, 'Accounting Charges'),
                     'School Maintenance': getAmount(year, data, 'School Maintenance'),
                     'Property Tax': getAmount(year, data, 'Property Tax'),
-                    'Repairs & Maintenances': getAmount(year, data, 'Repairs & Maintenances'),
-                    'Office Maintenance': getAmount(year, data, 'Office Maintenance'),
-                    'Water Charges': getAmount(year, data, 'Water Charges'),
-                    'Vehicle Maintenance': getAmount(year, data, 'Vehicle Maintenance'),
-                    'Security Charges': getAmount(year, data, 'Security Charges'),
-                    'Festival & Celabration Exp': getAmount(year, data, 'Festival & Celabration Exp'),
-                    'Legal Fees': getAmount(year, data, 'Legal Fees'),
-                    'Depreciation': getAmount(year, data, 'Depreciation'),
-                    'Total Expenditure': getAmount(year, data, 'Total Expenditure')
+                    'Repairs & Maintenances': getAmount(year, data, 'Repairs & Maintenances')
+                    // 'Office Maintenance': getAmount(year, data, 'Office Maintenance'),
+                    // 'Water Charges': getAmount(year, data, 'Water Charges'),
+                    // 'Vehicle Maintenance': getAmount(year, data, 'Vehicle Maintenance'),
+                    // 'Security Charges': getAmount(year, data, 'Security Charges'),
+                    // 'Festival & Celabration Exp': getAmount(year, data, 'Festival & Celabration Exp'),
+                    // 'Legal Fees': getAmount(year, data, 'Legal Fees'),
+                    // 'Depreciation': getAmount(year, data, 'Depreciation'),
+                    // 'Total Expenditure': getAmount(year, data, 'Total Expenditure')
                 })
             }
 
             return inputData
+        }
+
+        function getnewMax(data) {
+            let info = createTable(data)
+            let sum = 0
+            let result = 0
+            for (let i = 0; i < info.length; i++) {
+                sum = parseInt(info[i]['Printing & Stationery']) + parseInt(info[i]['Accounting Charges']) + parseInt(info[i]['School Maintenance']) + parseInt(info[i]['Property Tax']) + parseInt(info[i]['Repairs & Maintenances'])
+                // console.log(sum)
+                if(sum > result) {
+                    result = sum
+                }
+                sum = 0
+            }
+            return result
         }
 
         function getAmount(year, data, name) {
@@ -214,10 +258,21 @@ function expenseChart() {
         }
 
         chart.selectionDispatcher = function (_) {
+            console.log(dispatcher)
         if (!arguments.length) return dispatcher;
         dispatcher = _;
         return chart;
         };
+
+        chart.updateSelection = function (selectedData) {
+            console.log(selectedData)
+            if (!arguments.length) return;
+        
+            // Select an element if its datum was selected
+            selectableElements.classed('selected', d =>
+              selectedData.includes(d)
+            );
+          };
 
         return chart
 }
