@@ -207,6 +207,15 @@ function barChart() {
           return y(d[0]) - y(d[1]);
         })
         .attr("width", x.bandwidth())
+        .on("mouseover", function (d, i) {
+          console.log(i.data.year)
+          tooltip.transition().delay(30).duration(200).style("opacity", 1)
+          tooltip.html(i.data.year).style("left", d.pageX + "px").style("top", d.pageY + "px")
+        })
+        .on("mouseout", function (d) {
+          tooltip.transition().duration(100).style("opacity", 0)
+          // return tooltip.style("visibility", "hidden");
+        });
 
 
       //Appending the Y axis label for the bar chart.
@@ -302,6 +311,15 @@ function barChart() {
           return y(d[0]) - y(d[1]);
         })
         .attr("width", x.bandwidth())
+        .on("mouseover", function (d, i) {
+          console.log(i.data.year)
+          tooltip.transition().delay(30).duration(200).style("opacity", 1)
+          tooltip.html(i.data.year).style("left", d.pageX + "px").style("top", d.pageY + "px")
+        })
+        .on("mouseout", function (d) {
+          tooltip.transition().duration(100).style("opacity", 0)
+          // return tooltip.style("visibility", "hidden");
+        });
 
 
       //Appending the Y axis label for the bar chart.
@@ -408,6 +426,15 @@ function barChart() {
           return y(d[0]) - y(d[1]);
         })
         .attr("width", x.bandwidth())
+        .on("mouseover", function (d, i) {
+          console.log(i.data.year)
+          tooltip.transition().delay(30).duration(200).style("opacity", 1)
+          tooltip.html(i.data.year).style("left", d.pageX + "px").style("top", d.pageY + "px")
+        })
+        .on("mouseout", function (d) {
+          tooltip.transition().duration(100).style("opacity", 0)
+          // return tooltip.style("visibility", "hidden");
+        });
 
 
       //Appending the Y axis label for the bar chart.
