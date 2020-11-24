@@ -29,4 +29,22 @@
       .selectionDispatcher(d3.dispatch(dispatchString))
       ('#vis-svg-2', data);
   })
+  d3.csv("data/Revised Income Expenditure/Combined Income Expenditure - Sheet1.csv").then(data => {
+    const dispatchString = 'selectionUpdated';
+
+    // Create a stacked bar chart given 
+    // a div id selector to put our svg in; and the data to use.
+    let expenseAreaChart = expenseChart()
+      .selectionDispatcher(d3.dispatch(dispatchString))
+      ('#vis-svg-4', data);
+  })
+  d3.csv("data/Revised Income Expenditure/Combined Income Expenditure - Sheet1.csv").then(data => {
+    const dispatchString = 'selectionUpdated';
+
+    // Create a stacked bar chart given 
+    // a div id selector to put our svg in; and the data to use.
+    let incomeAreaChart = incomeChart()
+      .selectionDispatcher(d3.dispatch(dispatchString))
+      ('#vis-svg-5', data);
+  })
 })());
