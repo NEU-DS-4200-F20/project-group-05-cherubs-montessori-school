@@ -76,9 +76,22 @@ function barChart() {
       })
       .attr("width", x.bandwidth())
       .on("mouseover", function (d, i) {
-        console.log(i.data.year)
+        let numStudents = i[1]-i[0]
+        var grade = ""
+        if(i.data["M0"] == numStudents){
+          grade = "M0" + ": " + i.data["M0"]
+        }
+        else if (i.data["M1"] == numStudents){
+          grade = "M1"+ ": " + i.data["M1"]
+        }
+        else if (i.data["M2"] == numStudents){
+          grade = "M2"+ ": " + i.data["M2"]
+        }
+        else if (i.data["M3"] == numStudents){
+          grade = "M3"+ ": " + i.data["M3"]
+        }
         tooltip.transition().delay(30).duration(200).style("opacity", 1)
-        tooltip.html(i.data.year).style("left", d.pageX + "px").style("top", d.pageY + "px")
+        tooltip.html(i.data.year + '<br/>' + grade).style("left", d.pageX + "px").style("top", d.pageY + "px")
       })
       .on("mouseout", function (d) {
         tooltip.transition().duration(100).style("opacity", 0)
@@ -192,9 +205,16 @@ function barChart() {
         })
         .attr("width", x.bandwidth())
         .on("mouseover", function (d, i) {
-          console.log(i.data.year)
+          console.log(i)
+          let numStudents = i[1]-i[0]
+          var grade = ""
+          console.log(Object.keys(i.data))
+          for(key in Object.keys(i.data)){
+            if (i.data[Object.keys(i.data)[key]] == numStudents)
+            grade = Object.keys(i.data)[key] + ": " + numStudents
+          }
           tooltip.transition().delay(30).duration(200).style("opacity", 1)
-          tooltip.html(i.data.year).style("left", d.pageX + "px").style("top", d.pageY + "px")
+          tooltip.html(i.data.year + '<br/>' + grade).style("left", d.pageX + "px").style("top", d.pageY + "px")
         })
         .on("mouseout", function (d) {
           tooltip.transition().duration(100).style("opacity", 0)
@@ -296,9 +316,23 @@ function barChart() {
         })
         .attr("width", x.bandwidth())
         .on("mouseover", function (d, i) {
-          console.log(i.data.year)
+          console.log(i)
+          let numStudents = i[1]-i[0]
+          var grade = ""
+          if(i.data["M0"] == numStudents){
+            grade = "M0" + ": " + i.data["M0"]
+          }
+          else if (i.data["M1"] == numStudents){
+            grade = "M1"+ ": " + i.data["M1"]
+          }
+          else if (i.data["M2"] == numStudents){
+            grade = "M2"+ ": " + i.data["M2"]
+          }
+          else if (i.data["M3"] == numStudents){
+            grade = "M3"+ ": " + i.data["M3"]
+          }
           tooltip.transition().delay(30).duration(200).style("opacity", 1)
-          tooltip.html(i.data.year).style("left", d.pageX + "px").style("top", d.pageY + "px")
+          tooltip.html(i.data.year + '<br/>' + grade).style("left", d.pageX + "px").style("top", d.pageY + "px")
         })
         .on("mouseout", function (d) {
           tooltip.transition().duration(100).style("opacity", 0)
@@ -411,9 +445,17 @@ function barChart() {
         })
         .attr("width", x.bandwidth())
         .on("mouseover", function (d, i) {
-          console.log(i.data.year)
+          let numStudents = i[1]-i[0]
+          console.log(numStudents)
+          var grade = ""
+          console.log(i)
+          console.log(Object.keys(i.data))
+          for(key in Object.keys(i.data)){
+            if (i.data[Object.keys(i.data)[key]] == numStudents)
+            grade = "Years spent: " + Object.keys(i.data)[key] + "<br/> Number of Students: " + numStudents
+          }
           tooltip.transition().delay(30).duration(200).style("opacity", 1)
-          tooltip.html(i.data.year).style("left", d.pageX + "px").style("top", d.pageY + "px")
+          tooltip.html(i.data.year + '<br/>' + grade).style("left", d.pageX + "px").style("top", d.pageY + "px")
         })
         .on("mouseout", function (d) {
           tooltip.transition().duration(100).style("opacity", 0)
