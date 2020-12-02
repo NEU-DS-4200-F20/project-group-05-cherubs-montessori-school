@@ -9,9 +9,9 @@ function areaChart() {
         bottom: 50
       },
       width = 800 - margin.left - margin.right,
-      height = 600 - margin.top - margin.bottom;
-      dispatcher = null;
-      selectableElements = d3.select(null)
+      height = 600 - margin.top - margin.bottom,
+      dispatcher = null,
+      selectableElements = d3.select(null);
 
     // Create the area chart by adding an svg to the div with the id 
     // specified by the selector using the given data
@@ -60,6 +60,8 @@ function areaChart() {
             .y0(y(0))
             .y1(function(d) { return y(d.amount); })
 
+        console.log(area, "area1")
+
         let columns = ["Income", "Expense"].map(function(id) {
             return {
                 id: id,
@@ -69,6 +71,8 @@ function areaChart() {
             }
         })
 
+        console.log(columns)
+
         z.domain(columns.map(function(a) { return a.id }))
 
         let column = g.selectAll(".area")
@@ -77,7 +81,9 @@ function areaChart() {
             .attr("class", function(d) { return `area ${d.id}`;})
 
         column.append("path")
-            .attr("d", function(d) {return area(d.values)})
+            .attr("d", function(d) {
+                console.log(area(d.values), "third d is")
+                return area(d.values)})
             .style("fill", function(d) { return z(d.id) })
     
         
@@ -198,15 +204,23 @@ function areaChart() {
             }
         }
 
-        function createnewPath(data) {
+        function createnewPath(selectedData) {
+            console.log(selectedData)
             let svg = d3.select("#vis-svg-2")
 
+            let g = svg.selectAll("g")
 
-            let x = d3.scaleBand().domain(data.map(function(d) { return d.Year; })).range([0, width]).padding(1)
+            console.log(g)
+
+            let type = selectedData[0].type
+
+
+            let x = d3.scaleBand().domain(selectedData.map(function(d) { return d.year; })).range([0, width]).padding(1)
 
             let y = d3.scaleLinear().range([490, 0])
 
             y.domain([0, 15698100])
+
 
             let color = d3.scaleOrdinal()
             .domain(["Type"])
@@ -220,24 +234,33 @@ function areaChart() {
             .y0(y(0))
             .y1(function(d) { return y(d.amount); })
 
+            console.log(area, "area2")
+
             let columns = ["Type"].map(function(id) {
                 return {
                     id: id,
-                    values: data.map(function(d) {
-                        return {year: d.year, amount: d[id]}
+                    values: selectedData.map(function(d) {
+                        if(d.type == type) {
+                            console.log(d, "d is")
+                            return {year: d.year, amount: parseInt(d.amount)}
+                        }
                     })
                 }
             })
+
+            console.log(columns)
     
             z.domain(columns.map(function(a) { return a.id }))
     
-            let column = svg.selectAll(".area")
+            let column = g.selectAll(".area")
                 .data(columns)
                 .enter().append("g")
                 .attr("class", function(d) { return `area ${d.id}`;})
     
             column.append("path")
-                .attr("d", function(d) {return area(d.values)})
+                .attr("d", function(d) {
+                    console.log( area(d.values), "second d is")
+                    return area(d.values)})
                 .style("fill", function(d) { return z(d.id) })
         }
 
@@ -251,12 +274,6 @@ function areaChart() {
             console.log("profit_chart selected data:", selectedData)
             if (!arguments.length) return;
             createnewPath(selectedData)
-            
-        
-            // Select an element if its datum was selected
-            // selectableElements.classed('selected', d =>
-            //   selectedData.includes(d)
-            // );
           };
 
         return chart

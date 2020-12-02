@@ -85,15 +85,11 @@ function expenseChart() {
             return z(name)})
         .attr("d", d3.area()
         .x(function(d,i) { 
-            console.log(x(d.data.year))
             return x(d.data.year)})
         .y0(function(d) {return y(d[0])})
         .y1(function(d) {return y(d[1])})
         )
         .on("click", function (d, i) {
-            console.log(d)
-            console.log(i)
-
             let expenseType = i.key
             let years = [2015, 2016, 2017, 2018, 2019]
             let result = []
@@ -107,10 +103,10 @@ function expenseChart() {
             console.log(result)
             console.log(expenseType)
 
-            console.log(this)
             d3.select(this).classed('selected')
             let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
-            console.log(dispatchString)
+            console.log(dispatchString, "ds")
+            console.log(g, "this")
             dispatcher.call(dispatchString, this, result);
           })
         
@@ -233,7 +229,7 @@ function expenseChart() {
         }
 
         chart.selectionDispatcher = function (_) {
-            console.log(dispatcher)
+            console.log(dispatcher, "dispatcher")
             if (!arguments.length) return dispatcher;
             dispatcher = _;
             return chart;

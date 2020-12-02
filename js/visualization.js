@@ -40,7 +40,7 @@
     .selectionDispatcher(d3.dispatch(dispatchString))
     ('#vis-svg-2', data);
 
-    expenseAreaChart.selectionDispatcher().on(dispatchString, profitAreaChart.updateSelection(data));
+    expenseAreaChart.selectionDispatcher().on(dispatchString, profitAreaChart.updateSelection);
   })
   d3.csv("data/Revised Income Expenditure/Combined Income Expenditure - Sheet1.csv").then(data => {
     const dispatchString = 'selectionUpdated';

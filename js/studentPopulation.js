@@ -48,7 +48,6 @@ function barChart() {
 
     //Making stacked data
     let stackedData = d3.stack().keys(keys)(newData)
-    console.log(stackedData)
 
     //Create the stacked bars
     g.append("g")
@@ -60,12 +59,10 @@ function barChart() {
       })
       .selectAll("rect")
       .data(function (d) {
-        console.log(d)
         return d
       })
       .enter().append("rect")
       .attr("x", function (d) {
-        console.log(d)
         return x(d.data.year)
       })
       .attr("y", function (d) {
@@ -205,7 +202,6 @@ function barChart() {
         })
         .attr("width", x.bandwidth())
         .on("mouseover", function (d, i) {
-          console.log(i)
           let numStudents = i[1]-i[0]
           var grade = ""
           console.log(Object.keys(i.data))
@@ -316,7 +312,6 @@ function barChart() {
         })
         .attr("width", x.bandwidth())
         .on("mouseover", function (d, i) {
-          console.log(i)
           let numStudents = i[1]-i[0]
           var grade = ""
           if(i.data["M0"] == numStudents){
@@ -419,7 +414,6 @@ function barChart() {
 
 
       let newStackedData = d3.stack().keys(newkeys)(yearData)
-      console.log(newStackedData)
 
       g.append("g")
         .selectAll("g")
@@ -430,17 +424,14 @@ function barChart() {
         })
         .selectAll("rect")
         .data(function (d) {
-          console.log(d)
           return d
         })
         .enter().append("rect")
         .attr("x", function (d) { return x(d.data.year) })
         .attr("y", function (d) {
-          console.log(d)
           return y(d[1])
         })
         .attr("height", function (d) {
-          console.log(d)
           return y(d[0]) - y(d[1]);
         })
         .attr("width", x.bandwidth())
@@ -448,8 +439,6 @@ function barChart() {
           let numStudents = i[1]-i[0]
           console.log(numStudents)
           var grade = ""
-          console.log(i)
-          console.log(Object.keys(i.data))
           for(key in Object.keys(i.data)){
             if (i.data[Object.keys(i.data)[key]] == numStudents)
             grade = "Years spent: " + Object.keys(i.data)[key] + "<br/> Number of Students: " + numStudents

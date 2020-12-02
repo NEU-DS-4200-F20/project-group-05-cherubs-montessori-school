@@ -73,19 +73,15 @@ function incomeChart() {
         .enter()
         .append("path")
         .attr("fill", function(d) {
-            console.log(d)
             name = d.key;
-            console.log(name)
             return z(name)})
         .attr("d", d3.area()
         .x(function(d,i) { 
-            console.log(d)
             return x(d.data.year)})
         .y0(function(d) {return y(d[0])})
         .y1(function(d) {return y(d[1])})
         )
         .attr("height", function (d) {
-            console.log(d)
             return y(d[0]) - y(d[1]);
           })
     
@@ -169,7 +165,6 @@ function incomeChart() {
             let result = 0
             for (let i = 0; i < info.length; i++) {
                 sum = parseInt(info[i]['Application Fees']) + parseInt(info[i]['Day Care Fees']) + parseInt(info[i]['Interest']) + parseInt(info[i]['Summer camp fees']) + parseInt(info[i]['Sale of Alto Car'])
-                // console.log(sum)
                 if(sum > result) {
                     result = sum
                 }
