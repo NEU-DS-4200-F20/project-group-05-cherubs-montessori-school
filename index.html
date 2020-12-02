@@ -2,12 +2,13 @@
 <html lang='en'>
 
 <!-- Metadata -->
+
 <head>
   <meta charset='utf-8'>
 
   <!-- Title -->
   <title>Project Team 05: Topic, DS 4200 F20</title>
-  
+
   <!-- CSS Styling -->
   <link rel='stylesheet' href='style.css'>
 
@@ -23,105 +24,119 @@
 </head>
 
 <!-- Main page content -->
+
 <body>
 
   <!-- Update this with your GitHub repo URL -->
-  <span id='forkongithub'><a href='https://github.com/NEU-DS-4200-F20/project-group-05-cherubs-montessori-school'>Fork me on GitHub</a></span>
+  <span id='forkongithub'><a href='https://github.com/NEU-DS-4200-F20/project-group-05-cherubs-montessori-school'>Fork
+      me on GitHub</a></span>
 
   <!-- Writeup -->
   <div class='content-column'>
-   <h1>Project Team 05: Topic, DS4200 F20</h1>
-    
-    <p><strong>Srinath Gaddipati</strong>, <strong>Ethan Lam</strong>, <strong>Eric Park</strong></p>
-    
-    <p>Service-Learning Course Project as part of
-	<a href='https://canvas.instructure.com/courses/1781732'>DS 4200 F20: Information Visualization</a>, 
-	taught by <a href='https://cody.khoury.northeastern.edu/'>Prof. Cody Dunne</a>, 
-	<a href='https://visualization.khoury.northeastern.edu/'>Data Visualization @ Khoury</a>, 
-	<a href='https://www.khoury.northeastern.edu/'>Northeastern University</a>.</p>
-    
-    
-    <h1>Abstract</h1>
-    
-    <p>We are aiming to provide insightful visualizations for a Montessori school based on their vast student and teacher data along with theiroperational expenses over the past 5 years. By using this data, wewill identify any trends that may be affecting the rate at which stu-dents join, the type of students they attract, and what sort of expensesreap the most rewards and what expenses they can cut on. We alsohope to provide them with a better understanding of their studentand teacher demographic which can help with making informedexecutive decisions.Github  Repo  link:https://github.com/NEU-DS-4200-F20/project-group-05-cherubs-montessori-school.</p>
+    <h1>Project Team 05: Topic, DS4200 F20</h1>
 
-    
+    <p><strong>Srinath Gaddipati</strong>, <strong>Ethan Lam</strong>, <strong>Eric Park</strong></p>
+
+    <p>Service-Learning Course Project as part of
+      <a href='https://canvas.instructure.com/courses/1781732'>DS 4200 F20: Information Visualization</a>,
+      taught by <a href='https://cody.khoury.northeastern.edu/'>Prof. Cody Dunne</a>,
+      <a href='https://visualization.khoury.northeastern.edu/'>Data Visualization @ Khoury</a>,
+      <a href='https://www.khoury.northeastern.edu/'>Northeastern University</a>.</p>
+
+
+    <h1>Abstract</h1>
+
+    <p>We are aiming to provide insightful visualizations for a Montessori school based on their vast student and
+      teacher data along with theiroperational expenses over the past 5 years. By using this data, wewill identify any
+      trends that may be affecting the rate at which stu-dents join, the type of students they attract, and what sort of
+      expensesreap the most rewards and what expenses they can cut on. We alsohope to provide them with a better
+      understanding of their studentand teacher demographic which can help with making informedexecutive
+      decisions.Github Repo link:https://github.com/NEU-DS-4200-F20/project-group-05-cherubs-montessori-school.</p>
+
+
     <h1>Visualization</h1>
-    
+
     <p>Below are static visualization combining different datasets.</p>
 
-    
+
   </div>
-  
+
+  <div class='content-column'>
+    <select name="filter" id="filter">
+      <option id="studentGrade" value="Grade">Grade</option>
+      <option id="studentLocation" value="Location">Location</option>
+      <option id="studentYears" value="Years">Years</option>
+    </select>
+  </div>
+
   <!-- Visualization goes here -->
   <div class='vis-holder'>
-    <!-- Change viewbox to whatever you want, e.g., '0 0 1000 6000' This determines your aspect ratio and coordinate system -->    
+    <!-- Change viewbox to whatever you want, e.g., '0 0 1000 6000' This determines your aspect ratio and coordinate system -->
     <!-- Delete all the sample SVG code below after the viewbox to before the closing tag. Populate this part of the SVG with D3. -->
-    <div class = 'tooltip2'>
-    </div> 
-    <div class = 'tooltip2'>
-    </div> 
-    <input id="studentLocation" type = "button" value = "Location"/>
-    <input id="studentGrade" type = "button" value = "Grade"/>
-    <input id="studentYears" type = "button" value = "Years"/>
+    <div class='tooltip2'>
+    </div>
+    <div class='tooltip2'>
+    </div>
 
-    <div class = 'tooltip2'></div> 
-    <svg id='vis-svg-1'
-      preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
-      
-      
+    <div class='tooltip2'></div>
+    <svg id='vis-svg-1' preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1'
+      xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+
+
       <!-- <text x='30%' y='35%' text-anchor='middle'>A</text>
       <text x='70%' y='35%' text-anchor='middle'>B</text>
       <rect x='20%' y='40%' width='20%' height='20%' fill='yellow'></rect>
       <circle cx='70%' cy='50%' r='10%' fill='blue'></circle> -->
-      
 
-    <!-- Don't delete the closing tag! -->
+
+      <!-- Don't delete the closing tag! -->
     </svg>
 
   </div>
 
   <div class='vis-holder2'>
-    <svg id='vis-svg-2'
-    preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
-  </svg>
+    <svg id='vis-svg-2' preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1'
+      xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+    </svg>
   </div>
 
   <div class='vis-holder3'>
-    <svg id='vis-svg-3'
-    preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
-  </svg>
+    <svg id='vis-svg-3' preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1'
+      xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+    </svg>
   </div>
 
   <div class='vis-holder4'>
-    <svg id='vis-svg-4'
-    preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
-  </svg>
+    <svg id='vis-svg-4' preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1'
+      xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+    </svg>
   </div>
 
   <div class='vis-holder5'>
-    <svg id='vis-svg-5'
-    preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
-  </svg>
+    <svg id='vis-svg-5' preserveAspectRatio='xMidYMid meet' class='vis-svg' viewBox='0 0 1500 500' version='1.1'
+      xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+    </svg>
   </div>
-  
+
   <!-- Further writeup -->
-  <div class = 'content-column'>
+  <div class='content-column'>
 
     <h1>Demo Video</h1>
-    
-    <p>Embed an MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne made of Mike Bostock's flexible transitions in D3 slide:</p>
-    
+
+    <p>Embed an MP4 demo video using the HTML5 &lt;video&gt; tag. For example, this screen recording Prof. Cody Dunne
+      made of Mike Bostock's flexible transitions in D3 slide:</p>
+
     <video controls width='100%'>
       <source src='http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4' type='video/mp4'>
       <p>Your browser doesn't support HTML5 video. Here is
-       a <a href='http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4'>link to the video</a> instead.</p>
+        a <a href='http://www.ccs.neu.edu/home/cody/courses/shared/d3-flexible-transitions.mp4'>link to the video</a>
+        instead.</p>
     </video>
 
     <h1>Visualization explanation</h1>
-    
+
     <p>Replace with a brief explanation (can be copied from the paper) and linked presentation slides.</p>
-    
+
     <h1>Acknowledgments</h1>
 
     <p>
@@ -130,26 +145,26 @@
 
     <ul>
       <li><a href='https://d3js.org/'>
-        D3: Data-Driven Documents</a>
+          D3: Data-Driven Documents</a>
         by Mike Bostock is used for manipulating the DOM to create visualizations.
       </li>
       <li><a href='https://codepo8.github.io/css-fork-on-github-ribbon/#'>
-        Pure CSS responsive 'Fork me on GitHub' ribbon</a>
+          Pure CSS responsive 'Fork me on GitHub' ribbon</a>
         by Chris Heilmann is used to create the banner that links back to the source code repository.
       </li>
       <li>
         <a href='https://www.d3-graph-gallery.com/graph/barplot_stacked_basicWide.html'>
-        Basic stacked barplot</a>
+          Basic stacked barplot</a>
         describes how to build a basic stacked barplot.
       </li>
       <li>
         <a href='https://bl.ocks.org/interwebjill/8122dd08da9facf8c6ef6676be7da03f'>
-        Multiple Area chart with D3</a>
+          Multiple Area chart with D3</a>
         describes how to build a multiple area chart using d3.
       </li>
     </ul>
   </div>
-  
+
   <!-- Scripts at the end avoid need for dealing with async, defer, or onload event handlers -->
   <script src='lib/d3.v6.1.1/d3.min.js'></script>
   <script src='js/visualization.js'></script>
@@ -159,4 +174,5 @@
   <script src='js/expenseChart.js'></script>
   <script src='js/incomeChart.js'></script>
 </body>
+
 </html>

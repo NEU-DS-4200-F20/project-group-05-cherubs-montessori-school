@@ -507,6 +507,24 @@ function barChart() {
 
     }
 
+    d3.select("#filter").on('change', function() {
+      let selectedValue = d3.select(this).property('value')
+      switch(selectedValue) {
+        case ('Location'):
+          updateLocationData();
+          break;
+        case ('Grade'):
+          updateGradeData();
+          break;
+        case ('Years'):
+          updateYearsData();
+          break;
+        default:
+          updateGradeData();
+          break;
+      }      
+    })
+
     d3.select("#studentLocation").on("click", function () {
       updateLocationData();
     });
