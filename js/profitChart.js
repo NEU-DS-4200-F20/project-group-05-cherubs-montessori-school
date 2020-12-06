@@ -29,6 +29,7 @@ function areaChart() {
     
         let g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
     
+        let tooltip = d3.select("div.tooltip2")
         
         //make x axis
         let x = d3.scaleBand().domain(data.map(function(d) { return d.Year; })).range([0, width]).padding(1)
@@ -52,7 +53,7 @@ function areaChart() {
     
         let color = d3.scaleOrdinal()
         .domain(["Income", "Expense"])
-        .range(["#FCE205", "#03AC13"]);
+        .range(["#03AC13", "red"]);
 
         let z = color
 
@@ -87,7 +88,13 @@ function areaChart() {
                 console.log(area(d.values), "third d is")
                 return area(d.values)})
             .style("fill", function(d) { return z(d.id) })
-    
+            // .on("mouseover", function (d, i) {
+            //     console.log(i, "i")
+            //     console.log(d, "d")
+            //     tooltip.transition().delay(30).duration(200).style("opacity", 1)
+            //     tooltip.html(i.id + '<br/>' + "amount : " + y(d.screenx)).style("left", d.pageX + "px").style("top", d.pageY + "px")
+            //     // console.log(y(390), "y is")
+            // })
         
         // Appending the Y axis label for the bar chart.
           svg.append("text")
@@ -208,6 +215,10 @@ function areaChart() {
 
         function createnewPath(selectedData) {
 
+            let expenses = ["Property Tax", "Repairs & Maintenances", "School Maintenance", "Accounting Charges", "Printing & Stationery"]
+            let incomes = ["Sale of Alto Car", "Summer camp fees", "Interest", "Day Care Fees", "Application Fees"]
+
+
             let az = 0
             console.log(selectedData)
             let svg = d3.select("#vis-svg-2")
@@ -225,10 +236,17 @@ function areaChart() {
 
             y.domain([0, 15698100])
 
-
             let color = d3.scaleOrdinal()
-            .domain(["Type"])
-            .range(["red"]);
+                .domain(["Type"])
+
+            if(expenses.includes(selectedData[0].type)) {
+                console.log(selectedData[0].type, "type is")
+                color.range(["yellow"]);
+            }
+            
+            if(incomes.includes(selectedData[0].type)) {
+                color.range(["blue"]);
+            }
 
             let z = color
 
@@ -260,13 +278,9 @@ function areaChart() {
                 .data(columns)
                 .enter().append("g")
                 .attr("class", function(d) { return `area ${d.id}`;})
-            
-            let f
 
             column.append("path")
             .attr("d", function(d) {
-                // console.log(d)
-
                 if(az == 18) {
                     return area(d.values)
                 }
