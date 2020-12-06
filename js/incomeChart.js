@@ -9,7 +9,7 @@ function incomeChart() {
         bottom: 50
       },
       width = 800 - margin.left - margin.right,
-      height = 600 - margin.top - margin.bottom;
+      height = 600 - margin.top - margin.bottom,
       dispatcher = null;
 
     // Create the area chart by adding an svg to the div with the id 
@@ -84,6 +84,26 @@ function incomeChart() {
         .attr("height", function (d) {
             return y(d[0]) - y(d[1]);
           })
+        .on("click", function (d, i) {
+        let incomeType = i.key
+        let years = [2015, 2016, 2017, 2018, 2019]
+        let result = []
+        for (let x = 0; x < years.length; x++) {
+            result.push({
+                "year": years[x],
+                "type": incomeType,
+                "amount": i[x].data[incomeType]
+            })
+        }
+        console.log(result, "income result")
+        console.log(incomeType)
+
+        d3.select(this).classed('selected')
+        let dispatchString = Object.getOwnPropertyNames(dispatcher._)[0];
+        console.log(dispatchString, "ds")
+        console.log(g, "this")
+        dispatcher.call(dispatchString, this, result);
+        })
     
         
         // Appending the Y axis label for the bar chart.
