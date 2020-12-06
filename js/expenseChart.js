@@ -23,6 +23,8 @@ function expenseChart() {
         .attr('viewBox', [0, 0, width + margin.left + margin.right, height + margin.top + margin.bottom].join(' '))
     
         let g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        let tooltip = d3.select("div.tooltip2")
     
         //make x axis
         let x = d3.scaleBand().domain(data.map(function(d) { return d.Year; })).range([0, width]).padding(1)
@@ -108,6 +110,37 @@ function expenseChart() {
             console.log(dispatchString, "ds")
             console.log(g, "this")
             dispatcher.call(dispatchString, this, result);
+          })
+          .on("mouseover", function (d, i) {
+            console.log(i, "i")
+            console.log(d, "d")
+            tooltip.transition().delay(30).duration(200).style("opacity", 1)
+            // console.log(d.screenx)
+            // let xp = x.invert("expense")
+            // let currentXPosition = d3.mouse(this);
+            console.log(this, "pos")
+
+            // console.log(d3.pointer(d, this), "current pos")
+
+            let xp = d3.pointer(d, this)[0]
+            let yp = d3.pointer(d, this)[1]
+            console.log(xp, yp, "coordinates")
+            if(xp < 240 && xp > 115) {
+                tooltip.html("amount : " + i[0].data[i.key] + '<br/>' + "year : 2015" + '<br/>' + "type : " + i.key).style("left", d.pageX + "px").style("top", d.pageY + "px")
+            }
+            else if(xp > 240 && xp < 360) {
+                tooltip.html("amount : " + i[1].data[i.key] + '<br/>' + "year : 2016" + '<br/>' + "type : " + i.key).style("left", d.pageX + "px").style("top", d.pageY + "px")
+            }
+            else if(xp > 360 && xp < 480) {
+                tooltip.html("amount : " + i[2].data[i.key] + '<br/>' + "year : 2017" + '<br/>' + "type : " + i.key).style("left", d.pageX + "px").style("top", d.pageY + "px")
+            }
+            else if(xp > 480 && xp < 600) {
+                tooltip.html("amount : " + i[3].data[i.key] + '<br/>' + "year : 2018" + '<br/>' + "type : " + i.key).style("left", d.pageX + "px").style("top", d.pageY + "px")
+            }
+        })
+        .on("mouseout", function (d) {
+            tooltip.transition().duration(100).style("opacity", 0)
+            // return tooltip.style("visibility", "hidden");
           })
         
         

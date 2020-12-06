@@ -88,13 +88,38 @@ function areaChart() {
                 console.log(area(d.values), "third d is")
                 return area(d.values)})
             .style("fill", function(d) { return z(d.id) })
-            // .on("mouseover", function (d, i) {
-            //     console.log(i, "i")
-            //     console.log(d, "d")
-            //     tooltip.transition().delay(30).duration(200).style("opacity", 1)
-            //     tooltip.html(i.id + '<br/>' + "amount : " + y(d.screenx)).style("left", d.pageX + "px").style("top", d.pageY + "px")
-            //     // console.log(y(390), "y is")
-            // })
+            .on("mouseover", function (d, i) {
+                console.log(i, "i")
+                console.log(d, "d")
+                tooltip.transition().delay(30).duration(200).style("opacity", 1)
+                // console.log(d.screenx)
+                // let xp = x.invert("expense")
+                // let currentXPosition = d3.mouse(this);
+                console.log(this, "pos")
+
+                // console.log(d3.pointer(d, this), "current pos")
+
+                let xp = d3.pointer(d, this)[0]
+                let yp = d3.pointer(d, this)[1]
+                console.log(xp, yp, "coordinates")
+                if(xp < 240 && xp > 115) {
+                    tooltip.html(i.id + '<br/>' + "amount : " + i.values[0].amount + '<br/>' + "year : 2015").style("left", d.pageX + "px").style("top", d.pageY + "px")
+                }
+                else if(xp > 240 && xp < 360) {
+                    tooltip.html(i.id + '<br/>' + "amount : " + i.values[1].amount + '<br/>' + "year : 2016").style("left", d.pageX + "px").style("top", d.pageY + "px")
+                }
+                else if(xp > 360 && xp < 480) {
+                    tooltip.html(i.id + '<br/>' + "amount : " + i.values[2].amount + '<br/>' + "year : 2017").style("left", d.pageX + "px").style("top", d.pageY + "px")
+                }
+                else if(xp > 480 && xp < 600) {
+                    tooltip.html(i.id + '<br/>' + "amount : " + i.values[3].amount + '<br/>' + "year : 2018").style("left", d.pageX + "px").style("top", d.pageY + "px")
+                }
+                // console.log(y(390), "y is")
+            })
+            .on("mouseout", function (d) {
+                tooltip.transition().duration(100).style("opacity", 0)
+                // return tooltip.style("visibility", "hidden");
+              })
         
         // Appending the Y axis label for the bar chart.
           svg.append("text")
