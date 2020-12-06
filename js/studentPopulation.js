@@ -254,7 +254,7 @@ function barChart() {
       legendClassArray = legendClassArray.reverse();
 
       legend.append("rect")
-        .attr("x", width - 18)
+        .attr("x", width + 220)
         .attr("width", 18)
         .attr("height", 18)
         .style("fill", newcolor)
@@ -263,7 +263,7 @@ function barChart() {
         })
 
       legend.append("text")
-        .attr("x", width - 24)
+        .attr("x", width + 200)
         .attr("y", 9)
         .attr("dy", ".35em")
         .style("text-anchor", "end")
