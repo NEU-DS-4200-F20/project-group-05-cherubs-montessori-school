@@ -1,6 +1,8 @@
 // Initialize a stacked bar chart. Modeled after Mike Bostock's
 // Reusable Chart framework https://bost.ocks.org/mike/chart/
 function areaChart() {
+
+    let aw = 0;
     console.log("hey")
     let margin = {
         top: 60,
@@ -205,6 +207,8 @@ function areaChart() {
         }
 
         function createnewPath(selectedData) {
+
+            let az = 0
             console.log(selectedData)
             let svg = d3.select("#vis-svg-2")
 
@@ -215,9 +219,9 @@ function areaChart() {
             let type = selectedData[0].type
 
 
-            let x = d3.scaleBand().domain(selectedData.map(function(d) { return d.year; })).range([0, width]).padding(1)
+            let x = d3.scaleBand().domain(selectedData.map(function(d) { return d.year; })).range([50, width  + 50]).padding(1)
 
-            let y = d3.scaleLinear().range([490, 0])
+            let y = d3.scaleLinear().range([530, 40])
 
             y.domain([0, 15698100])
 
@@ -256,12 +260,22 @@ function areaChart() {
                 .data(columns)
                 .enter().append("g")
                 .attr("class", function(d) { return `area ${d.id}`;})
-    
+            
+            let f
+
             column.append("path")
-                .attr("d", function(d) {
-                    console.log( area(d.values), "second d is")
-                    return area(d.values)})
-                .style("fill", function(d) { return z(d.id) })
+            .attr("d", function(d) {
+                // console.log(d)
+
+                if(az == 18) {
+                    return area(d.values)
+                }
+                else {
+                    az = az + 1
+                }
+            })
+            .style("fill", function(d) { return z(d.id) })
+            
         }
 
         chart.selectionDispatcher = function (_) {
